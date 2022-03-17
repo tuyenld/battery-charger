@@ -1,0 +1,10 @@
+*SRC=MMSZ5248B;DI_MMSZ5248B;Diodes;Zener 10V-50V; 18.0V  0.500W   Diodes Inc. 500 mW Zener
+*SYM=HZEN
+.SUBCKT DI_MMSZ5248B  1 2
+*        Terminals    A   K
+D1 1 2 DF
+DZ 3 1 DR
+VZ 2 3 15.7
+.MODEL DF D ( IS=11.4p RS=31.3 N=1.10
++ CJO=25.8p VJ=1.00 M=0.330 TT=50.1n )
+.MODEL DR D ( IS=2.29f RS=9.90 N=3.00 )

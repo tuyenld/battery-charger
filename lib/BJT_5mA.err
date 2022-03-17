@@ -1,0 +1,8 @@
+STATUS: PSpice Schematics to Capture translator (17.4.0.d001)
+STATUS:  
+STATUS: Translator started at Wednesday, March 16, 2022 22:51:32
+STATUS: c:\cadence\spb_17.4\tools\bin\sch2cap -f "E:\sdu-courses\S22\EDB2\simulation\lib\BJT_5mA.lib" -o "E:\sdu-courses\S22\EDB2\simulation\lib\BJT_5mA.OLB" -i C:\Users\Dinh-Tuyen Le\\cdssetup\OrCAD_PSpice/17.4.0/PSpice.ini -d 000000000026099A
+INFO(ORSCH-1029): Using existing library 'c:\cadence\spb_17.4\tools\Capture\Library\PSpice\modeled.etc'.
+INFO(ORSCH-1031): Created new library 'E:\sdu-courses\S22\EDB2\simulation\lib\BJT_5mA.olb'.
+STATUS: Translator stopped at Wednesday, March 16, 2022 22:51:32
+STATUS: 0 Error messages, 0 Warning messages

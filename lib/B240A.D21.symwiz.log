@@ -1,0 +1,13 @@
+STATUS: PSpice Model Import Wizard for "Capture" (17.4.0.d001)
+STATUS:  
+   INFO: LIB driven flow
+   INFO: Input File: E:\sdu-courses\S22\EDB2\simulation\lib\B240A.D21.lib
+   INFO: Output File: E:\sdu-courses\S22\EDB2\simulation\lib\B240A.D21.OLB
+STATUS:  
+STATUS: Identifying matching symbols automatically...started at Wednesday, March 16, 2022 23:31:19
+STATUS:  
+   INFO: Symbol "DI_B240A" created for model "DI_B240A".
+STATUS:  
+STATUS: Completed identifying matching symbols automatically...at Wednesday, March 16, 2022 23:31:19
+STATUS:  
+STATUS: 0 Error messages, 0 Warning messages

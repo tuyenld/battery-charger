@@ -1,0 +1,193 @@
+(ExpressProject "v2"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2019 P001 (3823098) [10/7/2019]-[03/17/22]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\lib\b240a.d21.olb"
+        (Type "Schematic Library"))
+      (File ".\lib\s3j.dsub.olb"
+        (Type "Schematic Library"))
+      (File ".\lib\gbu4g.dac.olb"
+        (Type "Schematic Library"))
+      (File ".\lib\bjt_5ma.olb"
+        (Type "Schematic Library"))
+      (File ".\lib\mmsz5248b.olb"
+        (Type "Schematic Library"))
+      (File ".\lib\ucc28c44_trans_unencrypted.olb"
+        (Type "Schematic Library"))
+      (File ".\lib\ucc28c44_trans_unencrypted_gen.olb"
+        (Type "Schematic Library"))
+      (File ".\lib\ucc28c44_trans.olb"
+        (Type "Schematic Library"))
+      (File ".\lib\dflz16.spice.olb"
+        (Type "Schematic Library")))
+    (Allegro Netlist Directory "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\v2.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\v2-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\v2-pspicefiles\schematic1\init.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\v2-pspicefiles\schematic1\init.sim"
+        (DisplayName "SCHEMATIC1-init")
+        (Type "PSpice Profile")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\lib\dflz16.spice.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\lib\dflz16.spice.lib"))
+      (File ".\lib\b240a.d21.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\lib\b240a.d21.lib"))
+      (File ".\lib\bjt_5ma.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\lib\bjt_5ma.lib"))
+      (File ".\lib\gbu4g.dac.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\lib\gbu4g.dac.lib"))
+      (File ".\lib\mmsz5248b.spice.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\lib\mmsz5248b.spice.lib"))
+      (File ".\lib\s3j.dsub.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\lib\s3j.dsub.lib"))
+      (File ".\lib\ucc28c44_trans_unencrypted.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\lib\ucc28c44_trans_unencrypted.lib"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (PartMRUSelector
+    (GND_EARTH
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (DI_DFLZ16
+      (FullPartName "DI_DFLZ16.Normal")
+      (LibraryName "E:\SDU-COURSES\S22\EDB2\SIMULATION\LIB\DFLZ16.SPICE.OLB")
+      (DeviceIndex "0"))
+    (UC3843A
+      (FullPartName "UC3843A.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ADVANLS\CONTROLLER.OLB")
+      (DeviceIndex "0"))
+    (MUR1510
+      (FullPartName "MUR1510.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ADVANLS\DI.OLB")
+      (DeviceIndex "0"))
+    (3N244
+      (FullPartName "3N244.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\MII_OPTO.OLB")
+      (DeviceIndex "0"))
+    (TL431
+      (FullPartName "TL431.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ADVANLS\VR.OLB")
+      (DeviceIndex "0"))
+    (BC846B
+      (FullPartName "BC846B.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\EBIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (2N2222A
+      (FullPartName "2N2222A.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ADVANLS\BJN.OLB")
+      (DeviceIndex "0"))
+    (2N2222
+      (FullPartName "2N2222.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ADVANLS\BJN.OLB")
+      (DeviceIndex "0"))
+    (CAPACITOR
+      (FullPartName "CAPACITOR.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ADVANLS\PSPICE_ELEM.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (469_03
+      (FullPartName "469_03.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIODE_FULLBRIDGE.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (XFRM_NONLINEAR
+      (FullPartName "XFRM_NONLINEAR.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (s3j
+      (FullPartName "s3j.Normal")
+      (LibraryName "E:\SDU-COURSES\S22\EDB2\SIMULATION\LIB\S3J.DSUB.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (BC846BL
+      (FullPartName "BC846BL.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\TRANSISTOR.OLB")
+      (DeviceIndex "0"))
+    (DI_B240A
+      (FullPartName "DI_B240A.Normal")
+      (LibraryName "E:\SDU-COURSES\S22\EDB2\SIMULATION\LIB\B240A.D21.OLB")
+      (DeviceIndex "0"))
+    (GND_SIGNAL
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (OPTO ISOLATOR-A
+      (FullPartName "OPTO ISOLATOR-A.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory "E:\sdu-courses\S22\EDB2\simulation\lib")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "E:\sdu-courses\S22\EDB2\simulation\v2.dsn")
+      (Path "Design Resources" "E:\sdu-courses\S22\EDB2\simulation\v2.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Outputs")
+      (Select "Design Resources" "Library"
+         "E:\sdu-courses\S22\EDB2\simulation\lib\ucc28c44_trans_unencrypted_gen.olb"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 582 0 445"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 5 24 5 677 24 463")
+        (Scroll "-48 -2")
+        (Zoom "56")
+        (Occurrence "/"))
+      (Path "E:\SDU-COURSES\S22\EDB2\SIMULATION\V2.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "Charger")))
+  (MPSSessionName "Dinh-Tuyen Le"))

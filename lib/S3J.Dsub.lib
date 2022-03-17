@@ -1,0 +1,8 @@
+*produced by Vishay General Semiconductor Taiwan
+*https://www.vishay.com/docs/87322/_p_s3j.txt
+*Allen Su, 2018/4/18
+*   PSPICE
+.model s3j d is = 6E-007 n = 2.488 rs = 0.00458
++ eg = 1.11 xti = 3
++ cjo = 182p vj = 0.264 m = 0.397 fc = 0.5
++ tt = 6.16576E-006 bv = 660 ibv = 1.98 af = 1 kf = 0

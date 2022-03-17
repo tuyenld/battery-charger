@@ -1,0 +1,23 @@
+**********************************
+* Model created by               *
+*   Uni.Dipl.-Ing. Arpad Buermen *
+*   arpad.burmen@ieee.org        *
+* Copyright:                     *
+*   Thomatronik GmbH, Germany    *
+*   info@thomatronik.de          *
+**********************************
+*https://www.vishay.com/docs/88054/gbu4g.txt
+* November 2000
+*   SPICE3
+* Nodes 1 and 2: AC input
+* Nodes 3 and 4: +/- DC output
+.subckt gbu4g 1 2 3 4
+d1 1 3 legd
+d2 2 3 legd
+d3 4 1 legd
+d4 4 2 legd
+.model legd d is = 2.46092E-006 n = 2.62593 rs = 0.00370811
++ eg = 1.11 xti = 3 tnom = 27
++ cjo = 2.8562E-010 vj = 0.25 m = 0.332534 fc = 0.5
++ tt = 2.88539E-006 bv = 440 ibv = 0.05 af = 1 kf = 0
+.ends

@@ -1,0 +1,13 @@
+STATUS: PSpice Model Import Wizard for "Capture" (17.4.0.d001)
+STATUS:  
+   INFO: LIB driven flow
+   INFO: Input File: E:\sdu-courses\S22\EDB2\simulation\lib\MMSZ5248B.spice.txt
+   INFO: Output File: E:\sdu-courses\S22\EDB2\simulation\lib\MMSZ5248B.OLB
+STATUS:  
+STATUS: Identifying matching symbols automatically...started at Wednesday, March 16, 2022 21:43:56
+STATUS:  
+STATUS:  
+STATUS: Completed identifying matching symbols automatically...at Wednesday, March 16, 2022 21:43:56
+STATUS:  
+   INFO: Symbol "DI_MMSZ5248B" created for model "DI_MMSZ5248B".
+STATUS: 0 Error messages, 0 Warning messages

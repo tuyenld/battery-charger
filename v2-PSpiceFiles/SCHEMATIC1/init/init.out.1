@@ -1,0 +1,139 @@
+
+**** 03/17/22 17:34:38 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-init"  [ E:\sdu-courses\S22\EDB2\simulation\v2-pspicefiles\schematic1\init.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "init.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lib/dflz16.spice.lib" 
+.LIB "../../../lib/b240a.d21.lib" 
+.LIB "../../../lib/bjt_5ma.lib" 
+.LIB "../../../lib/gbu4g.dac.lib" 
+.LIB "../../../lib/mmsz5248b.spice.lib" 
+.LIB "../../../lib/s3j.dsub.lib" 
+.LIB "../../../lib/ucc28c44_trans_unencrypted.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source V2
+C_C4         0 VCC  1n  TC=0,0 
+R_R5         N02403 N02379  1k TC=0,0 
+X_M1         N07524 N02303 N02379 0 0 SPA20N60C3 PARAMS:    
+R_R4         N02299 N02303  1k TC=0,0 
+R_R1         N02275 N02327  1k TC=0,0 
+C_C1         N02275 N02327  1n  TC=0,0 
+X_U1          N02327 N02275 N02403 N02191 0 N02299 VCC N02027 UCC28C44D
+C_C2         0 N02191  1n  TC=0,0 
+C_C6         0 N02403  1n  TC=0,0 
+C_C3         0 N02027  1n  TC=0,0 
+R_R7         0 N02379  1k TC=0,0 
+R_R2         N02403 N15703  1k TC=0,0 
+R_R3         N02027 N02191  1k TC=0,0 
+R_R8         0 N02794  1k TC=0,0 
+R_R9         N02794 N02275  1k TC=0,0 
+C_C7         GND_EARTH 0  1n  TC=0,0 
+R_R10         GND_EARTH N05919  1k TC=0,0 
+D_D21         N06135 N06445 DI_B240A 
+R_R11         N06135 N06089  1k TC=0,0 
+C_C8         N06089 N05919  1n  TC=0,0 
+C_C9         N06135 N06089  1n  TC=0,0 
+R_R12         N06427 N06445  1k TC=0,0 
+R_R13         N06402 N06427  1k TC=0,0 
+R_R14         N06135 N06427  1k TC=0,0 
+R_Rfbt         N06089 N06746  1k TC=0,0 
+R_R15         N06741 N06746  1k TC=0,0 
+L_L2         N15256 N06746  1.5uH  
+R_LOAD         GND_EARTH N06746  1k TC=0,0 
+D_Dsnub         N07524 0 s3j 
+C_C13         0 N07531  220n  TC=0,0 
+R_Rsnub1         0 N07531  2.23k TC=0,0 
+R_Rsnub2         0 N07531  2.23k TC=0,0 
+X_TX1    N07531 N07524 N07377 GND_EARTH SCHEMATIC1_TX1 
+V_V1         N08826 N08833  
++SIN 0 220 50 0 0 0
+X_U5         N08826 0 N08833 N07531 469_03
+C_C16         VCC 0 1n TC=0
+C_C17         N06445 GND_EARTH 1n TC=0
+C_Cbulk         N07531 0 220uF TC=0
+C_Cout1         N15256 GND_EARTH 220uF TC=0
+C_Cout2         N06746 GND_EARTH 200uF TC=0
+X_Q4         N02027 N02191 N15703 awb2n2222a PARAMS:                           
++                  
+Q_Q5         N06746 N06741 N06427 BC846B 
+X_U6         GND_EARTH N05919 N06135 awbtl431
+X_U7         N06402 N02027 N02794 N06135 3N244
+X_Dsec2         N07377 N15256 awbmur1510 PARAMS:                
+X_Dsec         N07377 N15256 awbmur1510 PARAMS:                
+X_U8         GND_EARTH N06741 DI_DFLZ16
+
+.subckt SCHEMATIC1_TX1 1 2 3 4  
+K_TX1         L1_TX1 L2_TX1 0.99 TN33_20_11_2P90
+L1_TX1         1 2 100 
+L2_TX1         3 4 100
+.ends SCHEMATIC1_TX1
+
+**** RESUMING init.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node GND_EARTH is floating
+
+ERROR(ORPSIM-15142): Node N05919 is floating
+
+ERROR(ORPSIM-15142): Node N06135 is floating
+
+ERROR(ORPSIM-15142): Node N06445 is floating
+
+ERROR(ORPSIM-15142): Node N06089 is floating
+
+ERROR(ORPSIM-15142): Node N06427 is floating
+
+ERROR(ORPSIM-15142): Node N06402 is floating
+
+ERROR(ORPSIM-15142): Node N06746 is floating
+
+ERROR(ORPSIM-15142): Node N06741 is floating
+
+ERROR(ORPSIM-15142): Node N15256 is floating
+
+ERROR(ORPSIM-15142): Node N07377 is floating
+
+ERROR(ORPSIM-15142): Node X_U6.9 is floating
+
+ERROR(ORPSIM-15142): Node X_U6.5 is floating
+
+ERROR(ORPSIM-15142): Node X_U6.10 is floating
+
+ERROR(ORPSIM-15142): Node X_U6.8 is floating
+
+ERROR(ORPSIM-15142): Node X_U6.1 is floating
+
+ERROR(ORPSIM-15142): Node X_U6.3 is floating
+
+ERROR(ORPSIM-15142): Node X_U7.N06421 is floating
+
+ERROR(ORPSIM-15142): Node X_U7.N83919 is floating
+
+ERROR(ORPSIM-15142): Node X_U8.3 is floating
+

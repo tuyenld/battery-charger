@@ -1,0 +1,9 @@
+STATUS: PSpice Schematics to Capture translator (17.4.0.d001)
+STATUS:  
+STATUS: Translator started at Wednesday, March 16, 2022 21:43:56
+INFO(ORSCH-1029): Using existing library 'c:\cadence\spb_17.4\tools\Capture\Library\PSpice\modeled.etc'.
+INFO(ORSCH-1031): Created new library 'E:\sdu-courses\S22\EDB2\simulation\lib\MMSZ5248B.olb'.
+INFO(ORSCH-1029): Using existing library 'C:\Cadence\SPB_17.4\tools\capture\library\pspice\micrel_stepdown_regulator.olb'.
+INFO(ORSCH-1029): Using existing library 'C:\Cadence\SPB_17.4\tools\capture\library\pspice\on_zener.olb'.
+STATUS: Translator stopped at Wednesday, March 16, 2022 21:46:21
+STATUS: 0 Error messages, 0 Warning messages
