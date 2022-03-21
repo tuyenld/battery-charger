@@ -1,0 +1,26 @@
+* source V2
+X_TX1    N26955 N27237 N28449 0 Test_TX1 
+V_V1         N30288 N27113  AC 1
++SIN 0 220 50 0 0 0
+C_C13         N27167 N26955  220n  TC=0,0 
+X_U10         N30288 0 N27113 N26955 KBL06
+C_Cout2         N28537 0 200uF TC=0
+X_Dsec         N28449 N28481 awbmur1510 PARAMS:                
+X_Dsec2         N28449 N28481 awbmur1510 PARAMS:                
+L_L2         N28481 N28537  1.5uH  
+R_LOAD         0 N28537  10 TC=0,0 
+C_Cout1         N28481 0 220uF TC=0
+C_Cbulk         N26955 0 1uF TC=0
+D_Dsnub         N27237 N27167 s3j 
+R_LOAD2         N27167 N26955  2k TC=0,0 
+V_V2         N34365 0  
++PULSE 0 12 50u 5n 5n 10u 100u
+X_Q1         N27237 N34365 0 awb2n6784 PARAMS:                                 
++      BYPASS_L=1 MTYPE=1
+R_LOAD3         0 N34365  2k TC=0,0 
+
+.subckt Test_TX1 1 2 3 4  
+K_TX1         L1_TX1 L2_TX1 0.99 TN33_20_11_2P90
+L1_TX1         1 2 100 
+L2_TX1         3 4 50
+.ends Test_TX1

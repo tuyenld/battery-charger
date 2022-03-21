@@ -1,0 +1,45 @@
+
+**** 03/18/22 15:37:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Test-test"  [ E:\sdu-courses\S22\EDB2\simulation\v2-PSpiceFiles\Test\test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lib/dflz16.spice.lib" 
+.LIB "../../../lib/b240a.d21.lib" 
+.LIB "../../../lib/bjt_5ma.lib" 
+.LIB "../../../lib/gbu4g.dac.lib" 
+.LIB "../../../lib/mmsz5248b.spice.lib" 
+.LIB "../../../lib/s3j.dsub.lib" 
+.LIB "../../../lib/ucc28c44_trans_unencrypted.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 50m 0 1e-6 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Test.net" 
+
+
+
+**** INCLUDING Test.net ****
+
+**** RESUMING test.cir ****
+.END
+
+WARNING(ORPSIM-15188): There are no devices in this circuit
+

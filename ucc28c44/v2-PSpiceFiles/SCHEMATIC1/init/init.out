@@ -1,0 +1,672 @@
+
+**** 03/18/22 10:12:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-init"  [ E:\sdu-courses\S22\EDB2\simulation\v2-pspicefiles\schematic1\init.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "init.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lib/dflz16.spice.lib" 
+.LIB "../../../lib/b240a.d21.lib" 
+.LIB "../../../lib/bjt_5ma.lib" 
+.LIB "../../../lib/gbu4g.dac.lib" 
+.LIB "../../../lib/mmsz5248b.spice.lib" 
+.LIB "../../../lib/s3j.dsub.lib" 
+.LIB "../../../lib/ucc28c44_trans_unencrypted.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5s 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source V2
+C_C4         0 VCC  1n  TC=0,0 
+R_R5         N02403 N02379  1k TC=0,0 
+X_M1         N07524 N02303 N02379 0 0 SPA20N60C3 PARAMS:    
+R_R4         N02299 N02303  1k TC=0,0 
+R_R1         N02275 N02327  1k TC=0,0 
+C_C1         N02275 N02327  1n  TC=0,0 
+X_U1          N02327 N02275 N02403 N02191 0 N02299 VCC N02027 UCC28C44D
+C_C2         0 N02191  1n  TC=0,0 
+C_C6         0 N02403  1n  TC=0,0 
+C_C3         0 N02027  1n  TC=0,0 
+R_R7         0 N02379  1k TC=0,0 
+R_R2         N02403 N15703  1k TC=0,0 
+R_R3         N02027 N02191  1k TC=0,0 
+R_R8         0 N02794  1k TC=0,0 
+R_R9         N02794 N02275  1k TC=0,0 
+C_C7         0 0  1n  TC=0,0 
+R_R10         0 N05919  1k TC=0,0 
+D_D21         N06135 N06445 DI_B240A 
+R_R11         N06135 N06089  1k TC=0,0 
+C_C8         N06089 N05919  1n  TC=0,0 
+C_C9         N06135 N06089  1n  TC=0,0 
+R_R12         N06427 N06445  1k TC=0,0 
+R_R13         N06402 N06427  1k TC=0,0 
+R_R14         N06135 N06427  1k TC=0,0 
+R_Rfbt         N06089 N06746  1k TC=0,0 
+R_R15         N06741 N06746  1k TC=0,0 
+L_L2         N15256 N06746  1.5uH  
+R_LOAD         0 N06746  1k TC=0,0 
+D_Dsnub         N07524 0 s3j 
+C_C13         0 N07531  220n  TC=0,0 
+R_Rsnub1         0 N07531  2.23k TC=0,0 
+R_Rsnub2         0 N07531  2.23k TC=0,0 
+X_TX1    N07531 N07524 N07377 0 SCHEMATIC1_TX1 
+V_V1         N08826 N08833  
++SIN 0 220 50 0 0 0
+X_U5         N08826 0 N08833 N08925 469_03
+C_C16         VCC 0 1n TC=0
+C_C17         N06445 0 1n TC=0
+C_Cbulk         N07531 0 220uF TC=0
+C_Cout1         N15256 0 220uF TC=0
+C_Cout2         N06746 0 200uF TC=0
+X_Q4         N02027 N02191 N15703 awb2n2222a PARAMS:                           
++                  
+Q_Q5         N06746 N06741 N06427 BC846B 
+X_U6         0 N05919 N06135 awbtl431
+X_U7         N06402 N02027 N02794 N06135 3N244
+X_Dsec2         N07377 N15256 awbmur1510 PARAMS:                
+X_Dsec         N07377 N15256 awbmur1510 PARAMS:                
+X_U8         0 N06741 DI_DFLZ16
+X_U9         N21803 0 N21809 N21631 469_03
+V_V2         N21803 N21809  
++SIN 100 220 50 0 0 0
+
+.subckt SCHEMATIC1_TX1 1 2 3 4  
+K_TX1         L1_TX1 L2_TX1 0.99 TN33_20_11_2P90
+L1_TX1         1 2 100 
+L2_TX1         3 4 100
+.ends SCHEMATIC1_TX1
+
+**** RESUMING init.cir ****
+.END
+
+**** 03/18/22 10:12:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-init"  [ E:\sdu-courses\S22\EDB2\simulation\v2-pspicefiles\schematic1\init.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DI_B240A        s3j             X_U1.D2         X_U5.D469-03    
+          IS    7.980000E-06  600.000000E-09   10.000000E-15     .0999       
+           N    1.13            2.488                           4.995        
+         ISR                                                   10.010000E-21 
+          NR                                                    4.995        
+         IKF                                                  999            
+          BV   40             660                             600            
+         IBV  500.000000E-06    1.98                          100.000000E-06 
+          RS     .0134          4.580000E-03                    1.000000E-06 
+          TT    1.440000E-09    6.165760E-06                    2.500000E-06 
+         CJO  370.000000E-12  182.000000E-12                    1.000000E-12 
+          VJ                     .264                            .75         
+           M     .333            .397                            .3333       
+
+
+               X_U6.M1MD431    X_U6.M2MZ2_5    X_U6.M4MID      X_Dsec2.model22 
+          IS  100.000000E-15    1.000000E-12    1.000000E-09   14.100000E-09 
+           N                    1.55                            1.6          
+          BV   37               2.74                          150            
+         IBV                     .02                            1            
+          RS    1.000000E-03     .5              .1             8.000000E-03 
+          TT    1.000000E-09    1.000000E-09    1.000000E-09   15.000000E-09 
+         CJO                   18.000000E-12                  524.600000E-12 
+          VJ                     .7                              .5          
+           M                     .4                              .3773       
+          FC                     .5                                          
+          EG                                                    1.11         
+
+
+               X_Dsec.model22  X_U8.DF         X_U8.DR         X_U9.D469-03    
+          IS   14.100000E-09   25.700000E-12    5.150000E-15     .0999       
+           N    1.6             1.1             3               4.995        
+         ISR                                                   10.010000E-21 
+          NR                                                    4.995        
+         IKF                                                  999            
+          BV  150                                             600            
+         IBV    1                                             100.000000E-06 
+          RS    8.000000E-03     .706           2.89            1.000000E-06 
+          TT   15.000000E-09   50.100000E-09                    2.500000E-06 
+         CJO  524.600000E-12  371.000000E-12                    1.000000E-12 
+          VJ     .5                                              .75         
+           M     .3773           .33                             .3333       
+          EG    1.11                                                         
+
+
+               Dbreak          X_U1.XAMP.DCLAMP                X_U1.XAMP.DMOD  
+          IS   10.000000E-15   10.000000E-15                   10.000000E-15 
+          BV                    6.8                                          
+         IBV                     .01                                         
+          RS     .1            10                                            
+         CJO  100.000000E-15                 
+
+
+**** 03/18/22 10:12:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-init"  [ E:\sdu-courses\S22\EDB2\simulation\v2-pspicefiles\schematic1\init.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC846B          X_Q4.model4     X_U6.M3MQ431    X_U1.XAMP.QPMOD 
+               NPN             NPN             NPN             PNP             
+       LEVEL    1               1               1               1            
+          IS    7.049000E-15  166.780000E-15  100.000000E-18  100.000000E-18 
+          EG                    1.11                                         
+          BF  279.1           150             500             217.647        
+          NF    1               1.074           1               1            
+         VAF   62.37           78                                            
+         IKF     .2201           .5                                          
+         ISE   59.160000E-15    3.920000E-12                                 
+          NE    1.81            1.776                                        
+          BR    3.816           2.394           1               1            
+          NR    1               1.074           1               1            
+         VAR                  500                                            
+         IKR    1.859                                                        
+         ISC   16.170000E-15                                                 
+          NC    2.394           1                                            
+          NK     .6305                                                       
+         ISS    0               0               0               0            
+          RB                     .676         200                            
+         RBM                     .676                                        
+          RE    0                .1             3               0            
+          RC    1.508            .654          10               0            
+         CJE    9.485000E-12   22.250000E-12   10.000000E-12    0            
+         VJE     .5             1.333            .75             .75         
+         MJE     .3333           .522                                        
+         CJC    7.287000E-12    8.370000E-12  200.000000E-12    0            
+         VJC     .5             1.333            .75             .75         
+         MJC     .3333           .518            .33             .33         
+        XCJC    1                .5             1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .7              .75             .75         
+         MJS                     .5                                          
+          TF  664.000000E-12  454.400000E-12                                 
+         XTF  147              13.24                                         
+         VTF   10               4.83                                         
+         ITF    4.664            .2163                                       
+          TR   10.000000E-09  117.500000E-09                                 
+         XTB    1.5             2.34                                         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.42            2.2          
+           D     .87             .87             .87             .52         
+
+
+**** 03/18/22 10:12:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-init"  [ E:\sdu-courses\S22\EDB2\simulation\v2-pspicefiles\schematic1\init.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.XDRIVE._NMOS 
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    3            
+          KP    1            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD   10            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ  101.851000E-09 
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+        NSUB    1.000000E+09 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+               X_U1.XDRIVE._PMOS 
+               PMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO   -3            
+          KP    1            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD    5.5          
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ  101.851000E-09 
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+        NSUB    1.000000E+09 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 03/18/22 10:12:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-init"  [ E:\sdu-courses\S22\EDB2\simulation\v2-pspicefiles\schematic1\init.sim ] 
+
+
+ ****     Ferromagnetic Core MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               TN33_20_11_2P90 
+       LEVEL    2            
+        AREA     .65         
+        PATH    8            
+          MS    1.289600E+06 
+           A    2.712800E+03 
+           C     .25001      
+           K    1.555100E+03 
+
+
+**** 03/18/22 10:12:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-init"  [ E:\sdu-courses\S22\EDB2\simulation\v2-pspicefiles\schematic1\init.sim ] 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.SOSC       X_U1.SUVLO      
+         RON     .01             .01         
+        ROFF    1.000000E+06   10.000000E+06 
+          VT    1.45           11.75         
+          VH     .95            2.75         
+          TD    0               0            
+
+
+**** 03/18/22 10:12:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-init"  [ E:\sdu-courses\S22\EDB2\simulation\v2-pspicefiles\schematic1\init.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)    0.0000  (N02027)-158.0E-06 (N02191)-158.0E-06 (N02275)     .0482     
+
+(N02299) 3.000E-06 (N02303) 3.000E-06 (N02327)     .0723 (N02379)-11.55E-12     
+
+(N02403)-26.09E-12 (N02794)     .0241 (N05919) 40.49E-27 (N06089) 15.70E-09     
+
+(N06135) 16.70E-09 (N06402) 16.70E-09 (N06427) 16.70E-09 (N06445) 16.70E-09     
+
+(N06741) 28.40E-09 (N06746) 14.70E-09 (N07377)    0.0000 (N07524)-51.16E-18     
+
+(N07531)-51.16E-18 (N08826)    0.0000 (N08833)    0.0000 (N08925)    0.0000     
+
+(N15256) 14.70E-09 (N15703)-40.66E-12 (N21631)   99.8210 (N21803)   99.9100     
+
+(N21809)    -.0896 (X_M1.1)    0.0000 (X_M1.2)    0.0000 (X_M1.3)    0.0000     
+
+(X_M1.4)    0.0000 (X_M1.5)    0.0000 (X_M1.6)    0.0000 (X_M1.7)    0.0000     
+
+(X_M1.g) 3.000E-06 (X_M1.s)-11.55E-12 (X_U1.5)    0.0000 (X_U1.6)    3.5000     
+
+(X_U1.7) 100.0E-06 (X_U1.8)-143.6E-06 (X_U1.9)    -.9277 (X_U6.1) 1.020E-06     
+
+(X_U6.3)   20.0000 (X_U6.5) 1.020E-06 (X_U6.8)    1.0000 (X_U6.9) 70.86E-27     
+
+(X_U8.3)  -13.7000 (X_M1.dd)-51.16E-18                   (X_U1.10)    0.0000    
+
+(X_U1.11)-937.7E-09                   (X_U1.12)-2.813E-06                       
+
+(X_U1.13)    0.0000                   (X_U1.16)-937.7E-09                       
+
+(X_U1.19)    0.0000                   (X_U1.21)    5.0000                       
+
+(X_U1.22)    5.0000                   (X_U1.50)    3.5000                       
+
+(X_U1.51) 100.0E-06                   (X_U6.10) 170.0E-09                       
+
+(X_U1.150)    0.0000                  (X_U1.191)    0.0000                      
+
+(X_M1.lgrg) 3.000E-06                 (X_M1.lsrs)-11.55E-12                     
+
+(X_M1.X1.a) 1.344E-21                 (X_M1.X1.b) 1.344E-21                     
+
+(X_M1.X1.c) 1.344E-21                 (X_M1.X1.d)-51.16E-18                     
+
+(X_M1.X1.sm)   -1.2091                (X_M1.X1.dio)-51.16E-18                   
+
+(X_M1.X1.ox1) 989.0E-09               (X_M1.X1.ox2)-51.16E-18                   
+
+(X_U1.XAMP.2)    -.5087               (X_U1.XAMP.3)    -.5087                   
+
+(X_U1.XAMP.5)    -.5172               (X_U1.XAMP.6)    -.5172                   
+
+(X_U7.N06421) 16.70E-09               (X_U7.N83875)     .0241                   
+
+(X_U7.N83919) 16.70E-09               (X_U7.N83937)     .0241                   
+
+(X_M1.X1.dio2)-51.16E-18              (X_M1.X1.ldrd)-51.16E-18                  
+
+(X_U1.XAMP.10)-79.00E-06              (X_U1.XAMP.13)    -.7028                  
+
+(X_M1.X1.dEQJ1) 66.90E-18             (X_M1.X1.dEQJ2)-22.55E-18                 
+
+(X_M1.X1.dEQJ3)-22.55E-18             (X_U1.XDRIVE.2)   -5.0000                 
+
+(X_U1.XDRIVE.3)   -5.0000             (X_U1.XLATCH.3)    3.5000                 
+
+(X_U1.XLATCH.4)    3.4999             (X_U1.XLATCH.7)    3.5000                 
+
+(X_U1.XLATCH.8) 100.0E-06             (X_U1.XLATCH.9) 100.0E-06                 
+
+(X_U1.XLATCH.10) 100.0E-06            (X_U1.XToggle.3)    3.5000                
+
+(X_U1.XToggle.4)    3.5000            (X_U1.XToggle.7)    3.5000                
+
+(X_U1.XToggle.8) 100.0E-06            (X_U1.XToggle.9) 100.0E-06                
+
+(X_U1.XToggle.10) 100.0E-06           (X_U1.XLATCH.X1.5)    5.0000              
+
+(X_U1.XLATCH.X2.5)    5.0000          (X_U1.XLATCH.X3.5)    5.0000              
+
+(X_U1.XLATCH.X4.5)    5.0000          (X_U1.XLATCH.X5.5)    5.0000              
+
+(X_U1.XLATCH.X6.5)    5.0000          (X_U1.XLATCH.X7.3)    0.0000              
+
+(X_U1.XLATCH.X8.3)    5.0000          (X_U1.XToggle.X1.5)    5.0000             
+
+(X_U1.XToggle.X2.5)    5.0000         (X_U1.XToggle.X3.5)    5.0000             
+
+(X_U1.XToggle.X4.5)    5.0000         (X_U1.XToggle.X5.5)    5.0000             
+
+(X_U1.XToggle.X6.5)    5.0000         (X_U1.XToggle.X7.3)    5.0000             
+
+(X_U1.XToggle.X8.3)    5.0000         
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -1.998E-01
+    X_U1.V3      1.000E-03
+    X_U1.V4     -9.377E-13
+    X_U6.VV61   -1.002E-12
+    X_U6.VV68   -1.020E-09
+    X_U8.VZ     -1.371E-11
+    X_M1.X1.V_sense  -1.479E-22
+    X_M1.X1.V_Isense   4.635E-20
+    X_M1.X1.V_sense2   0.000E+00
+    X_U7.X_H1.VH_H1   1.381E-29
+
+    TOTAL POWER DISSIPATION   2.00E+01  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  356.2E-12.
+         Time step =  590.2E-21, minimum allowable step size =  1.000E-18
+
+  These supply currents failed to converge:
+
+    I(X_M1.X1.E_Edg1)         =    -2.768A  \    -2.724A
+    I(X_M1.X1.E_Edg2)         =  -476.39mA  \  -468.83mA
+    I(X_M1.X1.E_Eds1)         =     3.066A  \     3.239A
+    I(X_M1.X1.E_Eds2)         =    -1.347A  \    -1.398A
+    I(X_M1.X1.E_Eds3)         =     1.509A  \     1.335A
+    I(X_M1.X1.E_Egs)          =    -3.229A  \    -3.178A
+    I(X_M1.X1.E_E001)         =    30.97nA  \   310.34pA
+    I(V_V1)                   =  -162.13mA  \  -163.54mA
+    I(X_U1.V4)                =    29.80nA  \ -91.35e-18A
+    I(X_U6.VV61)              =  -128.48pA  \   -80.52pA
+    I(X_U6.VV68)              =  -430.16pA  \   -1.020nA
+    I(X_U8.VZ)                =   -1.333nA  \   -13.22pA
+    I(X_M1.X1.V_sense)        =    3.407nA  \    34.46pA
+    I(X_M1.X1.V_sense2)       =    30.97nA  \   310.34pA
+    I(X_U7.X_H1.VH_H1)        =    4.880pA  \   273.40fA
+    I(X_U7.X_H1.H_H1)         =   -14.90nA  \  -880.39pA
+
+  These devices failed to converge:
+    D_D21     X_U6.DD16 X_U8.D1   Q_Q5      X_Q4.Q2n2222a_0 X_U6.QQ2  X_U7.Q_Q2 
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)    0.0000  (N02027)-91.35E-06 (N02191)-846.0E-09 (N02275)     .1858     
+
+(N02299)    1.1594 (N02303)    1.3931 (N02327)     .1859 (N02379)    -.5986     
+
+(N02403)-145.2E-06 (N02794)     .0315 (N05919)-299.0E-12 (N06089)-299.0E-12     
+
+(N06135)-299.1E-12 (N06402) 14.79E-09 (N06427) 19.67E-09 (N06445)-74.38E-12     
+
+(N06741) 32.69E-09 (N06746) 571.9E-18 (N07377)-23.62E-06 (N07524) 23.62E-06     
+
+(N07531) 97.67E-12 (N08826) 12.31E-06 (N08833)-12.31E-06 (N08925) 730.9E-12     
+
+(N15256)-97.77E-12 (N15703) 153.0E-06 (N21631)   99.8210 (N21803)   99.9100     
+
+(N21809)    -.0896 (X_M1.1) 7.656E-09 (X_M1.2) 69.01E-15 (X_M1.3) 11.56E-21     
+
+(X_M1.4) 290.0E-30 (X_M1.5)    0.0000 (X_M1.6)    0.0000 (X_M1.7)    0.0000     
+
+(X_M1.g)    1.3928 (X_M1.s)    -.6072 (X_U1.5)    0.0000 (X_U1.6)     .8000     
+
+(X_U1.7)     .8000 (X_U1.8)-83.04E-06 (X_U1.9)    -.8141 (X_U6.1) 18.48E-12     
+
+(X_U6.3)   20.0000 (X_U6.5) 18.48E-12 (X_U6.8)    1.0000 (X_U6.9) 1.754E-12     
+
+(X_U8.3)  -13.7000 (X_M1.dd)     .0078                   (X_U1.10)    0.0000    
+
+(X_U1.11)-824.1E-09                   (X_U1.12)-2.472E-06                       
+
+(X_U1.13)    0.0000                   (X_U1.16)-824.1E-09                       
+
+(X_U1.19)    0.0000                   (X_U1.21)    0.0000                       
+
+(X_U1.22)    0.0000                   (X_U1.50)     .8000                       
+
+(X_U1.51)     .8000                   (X_U6.10) 1.209E-09                       
+
+(X_U1.150)    0.0000                  (X_U1.191)    0.0000                      
+
+(X_M1.lgrg)    1.3927                 (X_M1.lsrs)    -.6072                     
+
+(X_M1.X1.a)-2.921E-12                 (X_M1.X1.b)-30.97E-09                     
+
+(X_M1.X1.c)-30.97E-09                 (X_M1.X1.d)     .5104                     
+
+(X_M1.X1.sm)   -1.1959                (X_M1.X1.dio)    -.0105                   
+
+(X_M1.X1.ox1)     .5544               (X_M1.X1.ox2)     .5104                   
+
+(X_U1.XAMP.2)-1.446E-06               (X_U1.XAMP.3)-112.6E-06                   
+
+(X_U1.XAMP.5)-759.8E-06               (X_U1.XAMP.6)-759.8E-06                   
+
+(X_U7.N06421) 14.75E-09               (X_U7.N83875)     .0315                   
+
+(X_U7.N83919)-299.1E-12               (X_U7.N83937)     .0315                   
+
+(X_M1.X1.dio2)    -.0105              (X_M1.X1.ldrd)     .0078                  
+
+(X_U1.XAMP.10)-45.67E-06              (X_U1.XAMP.13)    -.5839                  
+
+(X_M1.X1.dEQJ1)    -.0251             (X_M1.X1.dEQJ2)     .3032                 
+
+(X_M1.X1.dEQJ3)    -.2335             (X_U1.XDRIVE.2)   -3.8406                 
+
+(X_U1.XDRIVE.3)    -.7953             (X_U1.XLATCH.3)    1.4822                 
+
+(X_U1.XLATCH.4)    1.4822             (X_U1.XLATCH.7)     .8102                 
+
+(X_U1.XLATCH.8)     .8102             (X_U1.XLATCH.9)     .8000                 
+
+(X_U1.XLATCH.10)     .8102            (X_U1.XToggle.3)    1.4822                
+
+(X_U1.XToggle.4)    1.4822            (X_U1.XToggle.7)     .8102                
+
+(X_U1.XToggle.8)     .8102            (X_U1.XToggle.9)     .8000                
+
+(X_U1.XToggle.10)     .8102           (X_U1.XLATCH.X1.5)    5.0000              
+
+(X_U1.XLATCH.X2.5)    0.0000          (X_U1.XLATCH.X3.5)    5.0000              
+
+(X_U1.XLATCH.X4.5)    5.0000          (X_U1.XLATCH.X5.5)    0.0000              
+
+(X_U1.XLATCH.X6.5)    0.0000          (X_U1.XLATCH.X7.3)    5.0000              
+
+(X_U1.XLATCH.X8.3)    5.0000          (X_U1.XToggle.X1.5)    5.0000             
+
+(X_U1.XToggle.X2.5)    0.0000         (X_U1.XToggle.X3.5)    5.0000             
+
+(X_U1.XToggle.X4.5)    5.0000         (X_U1.XToggle.X5.5)    0.0000             
+
+(X_U1.XToggle.X6.5)    0.0000         (X_U1.XToggle.X7.3)    5.0000             
+
+(X_U1.XToggle.X8.3)    5.0000         
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-12
+**** Param: VNTOL = 1e-06
+**** Param: GMIN = 1e-12
+**** Param: TSTOP = 5
+**** Param: TMAX = 0
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-10
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+The following unused Convergence options can be added to simulation:
+CSHUNT=1e-12
+DIODERS=1e-4
+DIODECJO=2e-12
+BJTCJ=1e-11
+JFETCJ=1e-12
+MOSCJ=1e-12
+AutoConverge
+
+          JOB ABORTED
+
+**** 03/18/22 10:12:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-init"  [ E:\sdu-courses\S22\EDB2\simulation\v2-pspicefiles\schematic1\init.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =      590.60
+  Total job time (using Solver 1)   =    19528.75
+

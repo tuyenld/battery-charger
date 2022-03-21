@@ -1,0 +1,18 @@
+.ALIASES
+X_TX1    TX1(1=N26955 2=N27237 3=N28449 4=0 ) CN @V2.Test(sch_1):INS26983@BREAKOUT.XFRM_NONLINEAR.Normal(chips)
+V_V1            V1(+=N30288 -=N27113 ) CN @V2.Test(sch_1):INS27115@SOURCE.VSIN.Normal(chips)
+C_C13           C13(1=N27167 2=N26955 ) CN @V2.Test(sch_1):INS27089@ANALOG.C.Normal(chips)
+X_U10           U10(AC1=N30288 -=0 AC2=N27113 +=N26955 ) CN @V2.Test(sch_1):INS26919@DIODE_FULLBRIDGE.KBL06.Normal(chips)
+C_Cout2          Cout2(A=N28537 B=0 ) CN @V2.Test(sch_1):INS28577@PSPICE_ELEM.CAPACITOR.Normal(chips)
+X_Dsec          Dsec(AN=N28449 CAT=N28481 ) CN @V2.Test(sch_1):INS28505@DI.MUR1510.Normal(chips)
+X_Dsec2          Dsec2(AN=N28449 CAT=N28481 ) CN @V2.Test(sch_1):INS28453@DI.MUR1510.Normal(chips)
+L_L2            L2(1=N28481 2=N28537 ) CN @V2.Test(sch_1):INS28485@ANALOG.L.Normal(chips)
+R_LOAD          LOAD(1=0 2=N28537 ) CN @V2.Test(sch_1):INS28637@ANALOG.R.Normal(chips)
+C_Cout1          Cout1(A=N28481 B=0 ) CN @V2.Test(sch_1):INS28561@PSPICE_ELEM.CAPACITOR.Normal(chips)
+C_Cbulk          Cbulk(A=N26955 B=0 ) CN @V2.Test(sch_1):INS31333@PSPICE_ELEM.CAPACITOR.Normal(chips)
+D_Dsnub          Dsnub(A=N27237 C=N27167 ) CN @V2.Test(sch_1):INS32973@S3J.DSUB.s3j.Normal(chips)
+R_LOAD2          LOAD2(1=N27167 2=N26955 ) CN @V2.Test(sch_1):INS33008@ANALOG.R.Normal(chips)
+V_V2            V2(+=N34365 -=0 ) CN @V2.Test(sch_1):INS34125@SOURCE.VPULSE.Normal(chips)
+X_Q1            Q1(D=N27237 G=N34365 S=0 ) CN @V2.Test(sch_1):INS35090@MFN.2N6784.Normal(chips)
+R_LOAD3          LOAD3(1=0 2=N34365 ) CN @V2.Test(sch_1):INS35222@ANALOG.R.Normal(chips)
+.ENDALIASES

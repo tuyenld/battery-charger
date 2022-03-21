@@ -1,0 +1,18 @@
+[2022-03-18T15:50:33.300+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseStateHandler::CDSPulseStateHandler] [DEBUG] - Creating CDSPulseStateHandler.
+[2022-03-18T15:50:33.302+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseManager::startSync] [DEBUG] - Param received is conf explore
+[2022-03-18T15:50:33.302+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseManager::startSync] [DEBUG] - Handle start server synchronously.
+[2022-03-18T15:50:33.302+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseManager::startSync] [DEBUG] - Sending server start event to health state handler.
+[2022-03-18T15:50:33.320+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [PulseStartEvent::PulseStartEvent] [DEBUG] - Creating pulse start event.
+[2022-03-18T15:50:33.320+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [PulseStateNoServer::handleEvent] [DEBUG] - Start event received.
+[2022-03-18T15:50:33.322+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseManagerImpl::getInitJsonFileLocation] [DEBUG] - Creating json file pathC:/Users/Dinh-Tuyen Le/AppData/Local/Temp\pulse_stage_Dinh-Tuyen Le_1532\sjson
+[2022-03-18T15:50:33.323+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseManagerImpl::launchInitTranslateServer] [DEBUG] - Launching Init Translate Server.
+[2022-03-18T15:50:33.323+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseManagerImpl::launchInitTranslateServer] [DEBUG] - Init translate server command is c:\cadence\spb_17.4\tools/pcbdw/bin\translate.bat -parent "1532" -parentlocation "C:/Users/Dinh-Tuyen Le/AppData/Local/Temp\pulse_stage_Dinh-Tuyen Le_1532\sjson" -appname "orcad" -conf "explore"
+[2022-03-18T15:50:33.849+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPortFileReaderThread::checkFileCreated] [DEBUG] - Checking for server json file from launch.
+[2022-03-18T15:50:46.215+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPortFileReaderThread::readPort] [DEBUG] - Reading server json file from launch.
+[2022-03-18T15:50:46.225+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPortFileReaderThread::readPort] [DEBUG] - Reading data from server json file.
+[2022-03-18T15:50:46.225+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPortFileReaderThread::readPort] [DEBUG] - Signaling server json file from launch as read.
+[2022-03-18T15:50:46.225+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseManagerImpl::updateData] [DEBUG] - Port file reading finished.
+[2022-03-18T15:50:46.225+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseManagerImpl::updateData] [DEBUG] - Server started successfully.
+[2022-03-18T15:50:46.225+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseManagerImpl::updateData] [ERROR] - Pulse health checkup system could not be initialized for server http://127.0.0.1:7200
+[2022-03-18T15:50:46.225+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseStateHandler::setCurrentState] [DEBUG] - Setting state as started
+[2022-03-18T15:50:46.235+0100] [1532] [6944] [Dinh-Tuyen Le] [capture.exe] [192.168.56.1] [DESKTOP-J8M15A5] [CDSPulseManager::getDataValue] [DEBUG] - value is: http://127.0.0.1:7200

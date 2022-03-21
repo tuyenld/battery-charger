@@ -1,0 +1,52 @@
+﻿Part,Manufacturer,Part Number,Quantity,Price ($),Footprint (mm²),Description
+HS_M1,Aavid,529802B02500G,1,0.91,1203.13,ThetaSA: 7.32 C/W  Height: 1.5 mm  HeatSink_Power: 20 W  
+Dz,Diodes Inc.,MMSZ5246B-7-F,1,0.03,13.1,Type: SMT  VRWM: 16 V  
+Rz,Vishay-Dale,CRCW04021K10FKED,1,0.01,3,Resistance: 1.1 kΩ  Tolerance: 1.0%  Power: 63 mW  
+Q1,ON Semiconductor,BC846BLT1G,1,0.02,14,IcRated: 100 mA  HfeMin: 200   Vcbo: 80 V  
+Cout2,TDK,B41896C6108M000,2,1.03,324,Cap: 1 mF  Total Derated Cap: 2 mF  VDC: 50 V  ESR: 23 mΩ  Package: 16x31.5mm  
+L2,Coilcraft,SER1590-152MLB,1,1.12,324.12,L: 1.5 µH  DCR: 1.1 mΩ  IDC: 19 A  
+C11,Knowles Capacitors,2220Y6300105KXTWS2,1,3.38,53.9,Cap: 1 µF  Total Derated Cap: 1 µF  VDC: 630 V  ESR: 1 mΩ  Package: 2220  
+C12,Kemet,C0805C104M5RACTU,1,0.01,6.75,Cap: 100 nF  Total Derated Cap: 100 nF  VDC: 50 V  ESR: 64 mΩ  Package: 0805  
+C13,MuRata,GRM1555C1H102JA01J,1,0.01,3,Cap: 1 nF  Total Derated Cap: 1 nF  VDC: 50 V  ESR: 0 Ω  Package: 0402  
+C21,Chemi-Con,ELXZ500ELL680MF15D,1,0.09,68.89,Cap: 68 µF  Total Derated Cap: 68 µF  VDC: 50 V  ESR: 1.95 Ω  Package: 6.3x15mm  
+C22,Samsung Electro-Mechanics,CL21C220JBANNNC,1,0.01,6.75,Cap: 22 pF  Total Derated Cap: 22 pF  VDC: 50 V  ESR: 0 Ω  Package: 0805  
+C23,Yageo,CC0805JRNPO9BN120,1,0.01,6.75,Cap: 12 pF  Total Derated Cap: 12 pF  VDC: 50 V  ESR: 0 Ω  Package: 0805  
+Cbulk,Nichicon,LLS2G221MELA,2,1.98,729,Cap: 220 µF  Total Derated Cap: 440 µF  VDC: 400 V  ESR: 904 mΩ  Package: 25x35mm  
+Ccs,AVX,04025A471JAT2A,1,0.01,3,Cap: 470 pF  Total Derated Cap: 470 pF  VDC: 50 V  ESR: 0 Ω  Package: 0402  
+Cout1,TDK,B41896C6227M000,6,0.33,144,Cap: 220 µF  Total Derated Cap: 1.3 mF  VDC: 50 V  ESR: 74 mΩ  Package: 10x20mm  
+Cref,MuRata,GRM155R71C104KA88D,1,0.01,3,Cap: 100 nF  Total Derated Cap: 100 nF  VDC: 16 V  ESR: 1 mΩ  Package: 0402  
+Csnub,Vishay-Vitramon,VJ2220Y224KBEAT4X,1,1.58,53.9,Cap: 220 nF  Total Derated Cap: 220 nF  VDC: 500 V  ESR: 1 mΩ  Package: 2220  
+Ct,Kemet,C0805C102J1GACTU,1,0.09,6.75,Cap: 1 nF  Total Derated Cap: 1 nF  VDC: 100 V  ESR: 25 mΩ  Package: 0805  
+Cvdd,Chemi-Con,EMVY350ADA4R7MD55G,1,0.08,28.09,Cap: 4.7 µF  Total Derated Cap: 4.7 µF  VDC: 35 V  ESR: 3 Ω  Package: D55  
+D12,Diodes Inc.,MMSZ5248B-7-F,1,0.04,13.1,Type: SMT  VRWM: 18 V  
+D21,Infineon Technologies,BAS1602VH6327XTSA1,1,0.04,5.13,Type: Switching  VRRM: 80 V  Io: 250 mA  
+Dac,Diodes Inc.,GBJ2510-F,1,1.09,211.2,Type: Switching-Bridge  VRRM: 1 kV  Io: 25 A  
+Daux,CUSTOM,CUSTOM,1,NA,NA,Type: ?  VRRM: 310.37 V  Io: 40 mA  
+Dsec,CUSTOM,CUSTOM,1,NA,NA,Type: ?  VRRM: 425.41 V  Io: 15 A  
+Dsec2,CUSTOM,CUSTOM,1,NA,NA,Type: ?  VRRM: 425.41 V  Io: 15 A  
+Dsnub,Bourns,CD214C-F3600,1,0.2301,83.27,Type: Ultrafast  VRRM: 600 V  Io: 3 A  
+M1,Infineon Technologies,SPA20N60C3XKSA1,1,2.49,79.3,VdsMax: 600 V  IdsMax: 20.7 Amps  
+O1,Fairchild Semiconductor,FOD817A,1,0.11,71.06,CTR_Min: 80.0%  CTR_Max: 160.0%  IcMax: 50 mmA  
+Qsc,STMicroelectronics,2N2222A,1,1.11,57.3,IcRated: 800 mA  HfeMin: 0   Vcbo: 75 V  
+R11,Yageo,RC0201FR-0710KL,1,0.01,2.08,Resistance: 10 kΩ  Tolerance: 1.0%  Power: 50 mW  
+R12,Yageo,RC0201FR-0710KL,1,0.01,2.08,Resistance: 10 kΩ  Tolerance: 1.0%  Power: 50 mW  
+R13,Vishay-Dale,CRCW04024K99FKED,1,0.01,3,Resistance: 4.99 kΩ  Tolerance: 1.0%  Power: 63 mW  
+R21,Yageo,RC0201FR-0715K4L,1,0.01,2.08,Resistance: 15.4 kΩ  Tolerance: 1.0%  Power: 50 mW  
+R22,Vishay-Dale,CRCW04022M87FKED,1,0.01,3,Resistance: 2.87 MΩ  Tolerance: 1.0%  Power: 63 mW  
+Raux,Vishay-Dale,CRCW040210R0FKED,1,0.01,3,Resistance: 10 Ω  Tolerance: 1.0%  Power: 63 mW  
+Rbias,Vishay-Dale,CRCW060310K5FKEA,1,0.01,4.68,Resistance: 10.5 kΩ  Tolerance: 1.0%  Power: 100 mW  
+Rcs,Vishay-Dale,CRCW04021K00FKED,1,0.01,3,Resistance: 1 kΩ  Tolerance: 1.0%  Power: 63 mW  
+Rdrv,Vishay-Dale,CRCW120611R0FKEA,1,0.01,10.92,Resistance: 11 Ω  Tolerance: 1.0%  Power: 250 mW  
+Rfbb,Vishay-Dale,CRCW04024K99FKED,1,0.01,3,Resistance: 4.99 kΩ  Tolerance: 1.0%  Power: 63 mW  
+Rfbt,Vishay-Dale,TNPW040232K0BEED,1,0.12,3,Resistance: 32 kΩ  Tolerance: 0.1%  Power: 63 mW  
+Rled,Yageo,RC0201FR-0712K1L,1,0.01,2.08,Resistance: 12.1 kΩ  Tolerance: 1.0%  Power: 50 mW  
+Rsc,Vishay-Dale,CRCW04023K48FKED,1,0.01,3,Resistance: 3.48 kΩ  Tolerance: 1.0%  Power: 63 mW  
+Rsns,CUSTOM,CUSTOM,1,NA,NA,Resistance: 114.69 mΩ  Tolerance: 0.0%  Power: 0 W  
+Rsnub1,CUSTOM,CUSTOM,1,NA,NA,Resistance: 2.23 kΩ  Tolerance: 0.0%  Power: 0 W  
+Rsnub2,CUSTOM,CUSTOM,1,NA,NA,Resistance: 2.23 kΩ  Tolerance: 0.0%  Power: 0 W  
+Rstartup1,Panasonic,ERJ-8ENF2373V,1,0.01,10.92,Resistance: 237 kΩ  Tolerance: 1.0%  Power: 250 mW  
+Rstartup2,Panasonic,ERJ-8ENF2373V,1,0.01,10.92,Resistance: 237 kΩ  Tolerance: 1.0%  Power: 250 mW  
+Rt,Vishay-Dale,CRCW040213K7FKED,1,0.01,3,Resistance: 13.7 kΩ  Tolerance: 1.0%  Power: 63 mW  
+T1,Core=Wurth Elektronik   CoilFormer=Wurth Elektronik,Core=150-2171   CoilFormer=070-5783,1,NA,1771,Core Type: ERL35  Core Material: TP4A  Turns Ratio(Nps): 30:12  
+U1,Texas Instruments,UCC28C44QDRQ1,1,0.632,56.58,
+VR,Texas Instruments,TL431IDBVR,1,0.072,16.39,IkMin: 400 mA  InitialAccuracy: 1.5%  ReferenceOutput: 2.5 V  

@@ -1,0 +1,174 @@
+
+**** 03/18/22 16:22:11 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Test-test"  [ E:\sdu-courses\S22\EDB2\simulation\v2-PSpiceFiles\Test\test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lib/dflz16.spice.lib" 
+.LIB "../../../lib/b240a.d21.lib" 
+.LIB "../../../lib/bjt_5ma.lib" 
+.LIB "../../../lib/gbu4g.dac.lib" 
+.LIB "../../../lib/mmsz5248b.spice.lib" 
+.LIB "../../../lib/s3j.dsub.lib" 
+.LIB "../../../lib/ucc28c44_trans_unencrypted.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100m 0 1e-6 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Test.net" 
+
+
+
+**** INCLUDING Test.net ****
+* source V2
+X_TX1    N26955 N27237 N28449 0 Test_TX1 
+V_V1         N30288 N27113  AC 1
++SIN 0 220 50 0 0 0
+C_C13         N27167 N26955  220n  TC=0,0 
+X_U10         N30288 0 N27113 N26955 KBL06
+C_Cout2         N28537 0 200uF TC=0
+X_Dsec         N28449 N28481 awbmur1510 PARAMS:                
+X_Dsec2         N28449 N28481 awbmur1510 PARAMS:                
+L_L2         N28481 N28537  1.5uH  
+R_LOAD         0 N28537  10 TC=0,0 
+C_Cout1         N28481 0 220uF TC=0
+C_Cbulk         N26955 0 1uF TC=0
+D_Dsnub         N27237 N27167 s3j 
+R_LOAD2         N27167 N26955  2k TC=0,0 
+V_V2         N34365 0  
++PULSE 0 12 50u 5n 5n 10u 100u
+X_Q1         N27237 N34365 0 awb2n6784 PARAMS:                                 
++      BYPASS_L=1 MTYPE=1
+R_LOAD3         0 N34365  2k TC=0,0 
+
+.subckt Test_TX1 1 2 3 4  
+K_TX1         L1_TX1 L2_TX1 0.99 TN33_20_11_2P90
+L1_TX1         1 2 100 
+L2_TX1         3 4 50
+.ends Test_TX1
+
+**** RESUMING test.cir ****
+.END
+
+**** 03/18/22 16:22:11 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Test-test"  [ E:\sdu-courses\S22\EDB2\simulation\v2-PSpiceFiles\Test\test.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               s3j             X_U10.DKBL06    X_Dsec.model22  X_Dsec2.model22 
+          IS  600.000000E-09    1.323100E-06   14.100000E-09   14.100000E-09 
+           N    2.488           1.2911          1.6             1.6          
+         ISR                   10.010000E-21                                 
+          NR                    4.995                                        
+         IKF                    1.9588                                       
+          BV  660             600             150             150            
+         IBV    1.98           10.000000E-06    1               1            
+          RS    4.580000E-03    3.662300E-03    8.000000E-03    8.000000E-03 
+          TT    6.165760E-06   27.200000E-09   15.000000E-09   15.000000E-09 
+         CJO  182.000000E-12   48.500000E-12  524.600000E-12  524.600000E-12 
+          VJ     .264            .48             .5              .5          
+           M     .397            .32             .3773           .3773       
+          EG                     .72            1.11            1.11         
+
+
+**** 03/18/22 16:22:11 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Test-test"  [ E:\sdu-courses\S22\EDB2\simulation\v2-PSpiceFiles\Test\test.sim ] 
+
+
+ ****     Ferromagnetic Core MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               TN33_20_11_2P90 
+       LEVEL    2            
+        AREA     .65         
+        PATH    8            
+          MS    1.289600E+06 
+           A    2.712800E+03 
+           C     .25001      
+           K    1.555100E+03 
+
+
+**** 03/18/22 16:22:11 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Test-test"  [ E:\sdu-courses\S22\EDB2\simulation\v2-PSpiceFiles\Test\test.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N26955)-600.9E-21 (N27113)-3.355E-18 (N27167)-692.9E-21 (N27237)-600.9E-21     
+
+(N28449)    0.0000 (N28481)-499.1E-24 (N28537)-499.1E-24 (N30288)-3.355E-18     
+
+(N34365)    0.0000 (X_Q1.xinst2n6784.4)-600.9E-21                               
+
+(X_Q1.xinst2n6784.5)    0.0000        (X_Q1.xinst2n6784.6) 15.90E-30        
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/18/22 16:22:11 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Test-test"  [ E:\sdu-courses\S22\EDB2\simulation\v2-PSpiceFiles\Test\test.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =    11542.47
+  Total job time (using Solver 1)   =       33.88
+

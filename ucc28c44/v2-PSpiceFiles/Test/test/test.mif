@@ -1,0 +1,6 @@
+ lib=E:\sdu-courses\S22\EDB2\simulation\lib\s3j.dsub.lib, offset=131, size=168
+ lib=c:\cadence\spb_17.4\tools\PSpice\Library\diode_fullbridge.lib, offset=21899, size=297
+ lib=c:\cadence\spb_17.4\tools\PSpice\Library\di.lib, offset=365849, size=682
+ lib=c:\cadence\spb_17.4\tools\PSpice\Library\mfn.lib, offset=20255, size=1031
+ lib=c:\cadence\spb_17.4\tools\PSpice\Library\magnetic.lib, offset=2462, size=261
+ lib=c:\cadence\spb_17.4\tools\PSpice\Library\templates.lib, offset=36336, size=4684
