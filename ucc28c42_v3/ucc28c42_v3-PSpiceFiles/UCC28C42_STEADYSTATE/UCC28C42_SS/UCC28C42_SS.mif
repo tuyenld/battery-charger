@@ -1,0 +1,17 @@
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\libs\ncp1252.lib, offset=964, size=595
+ lib="e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\libs\infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib", offset=42450, size=1058
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42.lib, offset=13523, size=123
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42.lib, offset=13647, size=95
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42.lib, offset=9845, size=147
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42.lib, offset=9037, size=230
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42.lib, offset=1923, size=3458
+ lib=C:\Cadence\SPB_17.4\tools\PSpice\Library\zetex.lib, offset=103780, size=387
+ lib=C:\Cadence\SPB_17.4\tools\PSpice\Library\diode_fullbridge.lib, offset=21899, size=297
+ lib=C:\Cadence\SPB_17.4\tools\PSpice\Library\bjp.lib, offset=11238, size=1338
+ lib=C:\Cadence\SPB_17.4\tools\PSpice\Library\tex_inst.lib, offset=94365, size=693
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42.lib, offset=6977, size=486
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42.lib, offset=7878, size=447
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42.lib, offset=8326, size=254
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42.lib, offset=8581, size=150
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42.lib, offset=8732, size=152
+ lib=e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42.lib, offset=8885, size=151

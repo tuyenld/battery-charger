@@ -1,0 +1,74 @@
+
+**** 04/12/22 18:33:04 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Test-Test"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-pspicefiles\test\test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../libs/dflz18.lib" 
+.LIB "../../../libs/ncp1252.lib" 
+.LIB "../../../libs/infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib" 
+.LIB "../../../ucc28c42.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1s 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Test.net" 
+
+
+
+**** INCLUDING Test.net ****
+* source UCC28C42_V3
+L_La         0 N00378  15u  
+R_Rstart4         0 N00378  210k  
+L_Ls         0 N00232  15u  
+Kn_K2         L_Lm L_Ls 
++ L_La    1
+V_V3         N00224 0  AC 1
++SIN 0 220 50 0 0 0
+R_Rstart3         N00300 N02168  210k  
+L_Lm         N02256 0  1.5m  
+R_ESR_Lm         N02256 N00224  1  
+R_ESR_Ls         N02168 N00232  1  
+R_Rstart5         0 N00300  210k  
+X_Dz         0 N16740864 DI_SMAZ16
+V_V4         N16740857 0  AC 1
++SIN 0 30 50 0 0 0
+R_Rstart6         N16740864 N16740857  210k  
+C_Cin         0 N16776623  180u  TC=0,0 
+X_U10         N16776613 0 N16776741 N16776623 KBL06
+V_V2         N16776613 N16776741  AC 1
++SIN 0 220 50 0 0 0
+V_V5         N16777810 0  AC 1
++SIN 0 30 50 0 0 0
+R_Rstart7         N16777815 N16777810  210k  
+X_U37         0 N16777815 DI_DFLZ18
+R_Rstart8         0 N16778703  210k  
+L_L13         0 N16778483  296uH  
+V_V6         N16778483 0  AC 1
++SIN 0 220 50 0 0 0
+R_Rstart9         0 N16778698  210k  
+X_U112         N16778483 0 N16778698 0 0 N16778703 XFMR2 PARAMS:  RATIO1=2
++  RATIO2=2
+
+**** RESUMING Test.cir ****
+.END
+
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving V_V6. You may break the loop by adding a series resistance
+

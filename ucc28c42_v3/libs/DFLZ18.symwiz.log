@@ -1,0 +1,13 @@
+STATUS: PSpice Model Import Wizard for "Capture" (17.4.0.d001)
+STATUS:  
+   INFO: LIB driven flow
+   INFO: Input File: E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\libs\DFLZ18.lib
+   INFO: Output File: E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\libs\DFLZ18.OLB
+STATUS:  
+STATUS: Identifying matching symbols automatically...started at Monday, April 11, 2022 16:32:40
+STATUS:  
+STATUS:  
+STATUS: Completed identifying matching symbols automatically...at Monday, April 11, 2022 16:32:41
+STATUS:  
+   INFO: Symbol "DI_DFLZ18" created for model "DI_DFLZ18".
+STATUS: 0 Error messages, 0 Warning messages

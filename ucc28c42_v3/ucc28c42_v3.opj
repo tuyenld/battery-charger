@@ -1,0 +1,199 @@
+(ExpressProject "UCC28C42"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2019 P001 (3823098) [10/7/2019]-[04/12/22]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\libs\infineon_simulation model_coolmos_c7_mosfet_650v_spice.olb"
+        (Type "Schematic Library")
+        (DisplayName
+           ".\libs\infineon_simulation model_coolmos_c7_mosfet_650v_spice.olb"))
+      (File ".\libs\dflz18.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\ucc28c42_v3.DSN"
+      (Type "Schematic Design")
+      (DisplayName ".\ucc28c42_v3.DSN"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\ucc28c42_v3-pspicefiles\v3\v3.net"
+      (Type "Report"))
+    (File ".\ucc28c42_v3-pspicefiles\test\test.net"
+      (Type "Report"))
+    (File ".\ucc28c42_v3-pspicefiles\v2-buf\v2-buf.net"
+      (Type "Report"))
+    (File ".\ucc28c42_v3-pspicefiles\v4\v4.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\ucc28c42_v3-pspicefiles\ucc28c42_startup\ucc28c42_startup.sim"
+        (DisplayName "UCC28C42_STARTUP-UCC28C42_startup")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\ucc28c42_v3-pspicefiles\test\test.sim"
+        (DisplayName "Test-Test")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\ucc28c42_v3-pspicefiles\v1\v1.sim"
+        (DisplayName "v1-v1")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\ucc28c42_v3-pspicefiles\v3\v3.sim"
+        (DisplayName "v3-v3")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\ucc28c42_v3-pspicefiles\v2-buf\v2.sim"
+        (DisplayName "v2-buf-v2")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\ucc28c42_v3-pspicefiles\v4\v4.sim"
+        (DisplayName "v4-v4")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\ucc28c42_v3-pspicefiles\v4\v4.sim"))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\libs\dflz18.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\libs\dflz18.lib"))
+      (File ".\libs\ncp1252.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\libs\ncp1252.lib"))
+      (File ".\libs\infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           ".\libs\infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib"))
+      (File ".\ucc28c42.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\ucc28c42.lib"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (DI_DFLZ18
+      (FullPartName "DI_DFLZ18.Normal")
+      (LibraryName
+         "E:\SDU-COURSES\2022-SPRING\EDB2\SIMULATION\UCC28C42_V3\LIBS\DFLZ18.OLB")
+      (DeviceIndex "0"))
+    (1N5225
+      (FullPartName "1N5225.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIODE.OLB")
+      (DeviceIndex "0"))
+    (TL431/TI
+      (FullPartName "TL431/TI.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\TEX_INST.OLB")
+      (DeviceIndex "0"))
+    (awbinductor
+      (FullPartName "awbinductor.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ADVANLS\PSPICE_ELEM.OLB")
+      (DeviceIndex "0"))
+    (B82432A1155K000
+      (FullPartName "B82432A1155K000.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\EPCOS_SIMID_1812.OLB")
+      (DeviceIndex "0"))
+    (Kcouple2
+      (FullPartName "Kcouple2.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\TLINE.OLB")
+      (DeviceIndex "0"))
+    (K_Linear
+      (FullPartName "K_Linear.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (XFRM_LINEAR
+      (FullPartName "XFRM_LINEAR.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (2N2222A/ZTX
+      (FullPartName "2N2222A/ZTX.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ZETEX.OLB")
+      (DeviceIndex "0"))
+    (2N2907
+      (FullPartName "2N2907.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ADVANLS\BJP.OLB")
+      (DeviceIndex "0"))
+    (48CTQ060PbF
+      (FullPartName "48CTQ060PbF.Normal")
+      (LibraryName
+         "E:\SDU-COURSES\2022-SPRING\EDB2\SIMULATION\UCC28C42_PSPICE_TRANS_V2\LIBS\48CTQ060PBF.OLB")
+      (DeviceIndex "0"))
+    (BUZ80A
+      (FullPartName "BUZ80A.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\INFINEON_BUZ.OLB")
+      (DeviceIndex "0"))
+    (VS-48CTQ060-M3
+      (FullPartName "VS-48CTQ060-M3.Normal")
+      (LibraryName
+         "E:\SDU-COURSES\2022-SPRING\EDB2\SIMULATION\UCC28C42_PSPICE_TRANS_V2\LIBS\48CTQ060PBF.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-L
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (IPA65R225C7_L0
+      (FullPartName "IPA65R225C7_L0.Normal")
+      (LibraryName
+         "E:\SDU-COURSES\2022-SPRING\EDB2\SIMULATION\UCC28C42_PSPICE_TRANS_V1\LIBS\INFINEON_SIMULATION MODEL_COOLMOS_C7_MOSFET_650V_SPICE.OLB")
+      (DeviceIndex "0"))
+    (UCC28C42_STEADY
+      (FullPartName "UCC28C42_STEADY.Normal")
+      (LibraryName
+         "C:\WORK\01_UCC28C42\PRE-RELEASE\01_UCC28C42\02_PSPICE\UCC28C42_PSPICE_05NOV2008\UCC28C42_PSPICE_TRANS\UCC28C42.OLB")
+      (DeviceIndex "0"))
+    (UCC28C42_STARTUP
+      (FullPartName "UCC28C42_STARTUP.Normal")
+      (LibraryName
+         "C:\WORK\01_UCC28C42\PRE-RELEASE\01_UCC28C42\02_PSPICE\UCC28C42_PSPICE_05NOV2008\UCC28C42_PSPICE_TRANS\UCC28C42.OLB")
+      (DeviceIndex "0"))
+    (UCC28C42_SS
+      (FullPartName "UCC28C42_SS.Normal")
+      (LibraryName
+         "C:\WORK\01_UCC28C42\PRE-RELEASE\01_UCC28C42\02_PSPICE\UCC28C42_TRANS_05NOV2008\UCC28C4X.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3.DSN")
+      (Path "Design Resources"
+         "E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3.DSN"
+         "v4")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3.DSN"
+         "v3"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -30 0 200 0 536"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1354 24 554")
+        (Scroll "0 147")
+        (Zoom "102")
+        (Occurrence "/"))
+      (Path
+         "E:\SDU-COURSES\2022-SPRING\EDB2\SIMULATION\UCC28C42_V3\UCC28C42_V3.DSN")
+      (Schematic "v4")
+      (Page "v4")))
+  (MPSSessionName "Dinh-Tuyen Le")
+  (LastUsedLibraryBrowseDirectory
+     "E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\libs")
+  (Folder "Logs"))

@@ -1,0 +1,27 @@
+** Profile: "UCC28C42_STARTUP-UCC28C42_startup"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UCC28C42_STARTUP\UCC28C42_startup.sim ] 
+
+** Creating circuit file "UCC28C42_startup.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../libs/ncp1252.lib" 
+.LIB "../../../libs/infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib" 
+.LIB "../../../ucc28c42.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 30m 0 {SCHEDULE(0,1000ns,2.5m,25ns)} 
+.OPTIONS STEPGMIN
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1.0u
+.OPTIONS GMIN= 1.0E-11
+.OPTIONS ITL4= 10000
+.OPTIONS VNTOL= 100.0u
+.PROBE64 V(*) I(*) D(*) 
+.INC "..\UCC28C42_STARTUP.net" 
+
+
+.END

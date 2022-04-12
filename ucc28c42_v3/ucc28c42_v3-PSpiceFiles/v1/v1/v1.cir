@@ -1,0 +1,29 @@
+** Profile: "v1-v1"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v1\v1.sim ] 
+
+** Creating circuit file "v1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../libs/ncp1252.lib" 
+.LIB "../../../libs/infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib" 
+.LIB "../../../ucc28c42.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 20m 5m {SCHEDULE(0,1000ns,6m,20ns)} SKIPBP 
+.OPTIONS STEPGMIN
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1u
+.OPTIONS CHGTOL= 0.1p
+.OPTIONS GMIN= 1.0E-10
+.OPTIONS ITL4= 5000
+.OPTIONS RELTOL= 0.01
+.OPTIONS VNTOL= 1m
+.PROBE64 V(*) I(*) D(*) 
+.INC "..\v1.net" 
+
+
+.END

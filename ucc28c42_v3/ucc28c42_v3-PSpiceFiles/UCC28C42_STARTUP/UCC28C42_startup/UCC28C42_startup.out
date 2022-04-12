@@ -1,0 +1,405 @@
+
+**** 04/11/22 11:37:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STARTUP-UCC28C42_startup"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UC
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "UCC28C42_startup.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../libs/ncp1252.lib" 
+.LIB "../../../libs/infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib" 
+.LIB "../../../ucc28c42.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 30m 0 {SCHEDULE(0,1000ns,2.5m,25ns)} 
+.OPTIONS STEPGMIN
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1.0u
+.OPTIONS GMIN= 1.0E-11
+.OPTIONS ITL4= 10000
+.OPTIONS VNTOL= 100.0u
+.PROBE64 V(*) I(*) D(*) 
+.INC "..\UCC28C42_STARTUP.net" 
+
+
+
+**** INCLUDING UCC28C42_STARTUP.net ****
+* source UCC28C42_V3
+C_C5         CS 0  330pF  
+V_V1         VIN 0  
++PULSE 0 100 10u 200u 200u 1 2
+R_R15         N16754689 N167545750  78.7  
+L_L1         N16754455 N16755065  300u  
+R_R4         FB +VOUT2  15k  
+C_C12         N167545750 +VOUT1  150pF  
+C_C3         +VOUT1 N167555831  47u  
+R_R5         0 FB  3.9k  
+R_R3         N167555831 0  0.04  
+X_U10         N16754455 N16755065 0 N16755389 XFMR PARAMS: RATIO=0.16666
+C_C11         N16755065 N16755031  220pF  
+C_C9         N16754545 N16754411  150pF  
+R_R18         0 +VOUT1  8.2k  
+C_C16         N16754353 0  1.0uF IC=0 
+D_D15         N16754689 +VOUT1 ES3B 
+D_D5         N16755031 0 DI_S1K 
+R_R11         N16754545 +VOUT2  78.7  
+R_R6         FB N16755919  57.6k  
+R_R10         CS N16755485  1k  
+C_C8         VREF 0  0.1uF  
+C_C6         +VOUT2 N167556411  47u  
+C_C14         +VOUT1 0  0.1uF  
+X_U5         0 N16754353 DI_SMAZ16
+R_R26         N16755065 N16754455  5k  
+R_R17         N167551691 +VOUT2  10  
+C_C4         N16755919 COMP  56000pF  
+R_R20         N167556411 0  0.04  
+R_R7         N167549451 VIN  37.4k  
+C_C15         COMP FB  56pF  
+R_R14         0 N16755485  1.6  
+R_R12         OUT N16755425  10  
+R_R23         VIN N16754455  0.5  
+R_R9         0 +VOUT2  4.42k  
+R_R16         N16755031 0  39k  
+R_R1         RTCT VREF  13.7k  
+C_C2         VIN 0  10uF  
+C_C17         N16754353 0  0.1uF IC=0 
+R_R24         N16755389 N16754411  0.5  
+R_R13         0 N16755425  10k  
+D_D16         N16754411 N167551691 ES3B 
+C_C1         RTCT N16771372  470pF  
+R_R8         N16754353 N167549451  37.4k  
+X_U9         N16754455 N16755065 0 N16755101 XFMR PARAMS: RATIO=0.16666
+R_R19         0 +VOUT1  48  
+X_U11         N16755065 N16755425 N16755485 FQB6N80
+R_R2         N16771372 0  24  
+V_V3         N16754353 VDD 0Vdc
+D_D8         +VOUT2 N16754353 D1N4148 
+R_R25         N16755101 N16754689  0.5  
+R_R21         0 +VOUT2  480  
+C_C10         0 VIN  0.15uF  
+X_U13         COMP FB CS RTCT 0 OUT VDD VREF UCC28C42_START
+
+**** RESUMING UCC28C42_startup.cir ****
+.END
+
+**** 04/11/22 11:37:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STARTUP-UCC28C42_startup"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UC
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               ES3B            DI_S1K          D1N4148         X_U5.DF         
+          IS    7.270000E-12    7.310000E-18    2.682000E-09   25.700000E-12 
+           N     .7              .775           1.836           1.1          
+         ISR                                    1.565000E-09                 
+         IKF                                     .04417                      
+          BV  100             800             100                            
+         IBV   10.000000E-06    5.000000E-06  100.000000E-06                 
+          RS     .0224           .042            .5664           .756        
+          TT   36.000000E-09    4.320000E-06   11.540000E-09   50.100000E-09 
+         CJO   83.200000E-12   42.400000E-12    4.000000E-12  377.000000E-12 
+          VJ                                     .5                          
+           M     .333            .333            .3333           .33         
+
+
+               X_U5.DR         X_U11.DCGD      X_U11.DSUB      X_U11.DLIM      
+          IS    5.150000E-15   10.000000E-15   24.100000E-09  100.000000E-06 
+           N    1.49                            1.5                          
+          BV                                  800                            
+          RS     .46                             .0776                       
+          TT                                  650.000000E-09                 
+         CJO                  180.000000E-12  477.000000E-12                 
+          VJ                     .6              .8                          
+           M                     .68             .42                         
+
+
+               X_U13.D2        X_U13.XAMP.DCLAMP               X_U13.XAMP.DMOD 
+          IS   10.000000E-15   10.000000E-15                   10.000000E-15 
+          BV                    6.8                                          
+         IBV                     .01                                         
+          RS                   10                                            
+
+
+**** 04/11/22 11:37:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STARTUP-UCC28C42_startup"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UC
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U13.XAMP.QPMOD 
+               PNP             
+       LEVEL    1            
+          IS  100.000000E-18 
+          BF  217.647        
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 04/11/22 11:37:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STARTUP-UCC28C42_startup"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UC
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U11.DMOS      X_U13.XDRIVE._NMOS 
+               NMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    4               3            
+          KP    8.4             1            
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    2.000000E-03    0            
+          RD                   10            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0             101.851000E-09 
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+        NSUB                    1.000000E+09 
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+               X_U13.XDRIVE._PMOS 
+               PMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO   -3            
+          KP    1            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD    5.5          
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ  101.851000E-09 
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+        NSUB    1.000000E+09 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 04/11/22 11:37:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STARTUP-UCC28C42_startup"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UC
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U13.SOSC      X_U13.SUVLO     
+         RON     .01             .01         
+        ROFF    1.000000E+06   10.000000E+06 
+          VT    1.45           11.75         
+          VH     .95            2.75         
+          TD    0               0            
+
+
+WARNING(ORPSIM-16534): Using high values of ITL4 for Speed Level > 0 may increase total simulation job time.
+
+**** 04/11/22 11:37:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STARTUP-UCC28C42_startup"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UC
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   CS) 431.7E-21  (   FB) 7.367E-18  (  OUT) 2.998E-06  (  VDD) 149.0E-15      
+
+(  VIN)    0.0000  ( COMP)     .0729  ( RTCT)-158.0E-06  ( VREF)-158.0E-06      
+
+(+VOUT1)-149.8E-24 (+VOUT2) 35.71E-18 (X_U5.3)  -14.9000 (X_U9.5) 3.106E-30     
+
+(X_U9.6) 3.138E-30 (X_U10.5) 922.9E-30                   (X_U10.6) 922.5E-30    
+
+(X_U11.1) 73.65E-18                   (X_U11.2) 2.995E-06                       
+
+(X_U11.3) 442.5E-21                   (X_U13.5)    0.0000                       
+
+(X_U13.6)    3.5000                   (X_U13.7) 100.0E-06                       
+
+(X_U13.8)-143.6E-06                   (X_U13.9)    -.9271                       
+
+(X_U11.12) 2.995E-06                  (X_U11.13) 11.43E-09                      
+
+(X_U11.14)    0.0000                  (X_U11.15) 2.984E-06                      
+
+(X_U11.40) 432.1E-21                  (X_U13.10)    0.0000                      
+
+(X_U13.11)-9.281E-06                  (X_U13.12)-27.84E-06                      
+
+(X_U13.13)    0.0000                  (X_U13.16)-9.281E-06                      
+
+(X_U13.19) 13.55E-15                  (X_U13.21)    5.0000                      
+
+(X_U13.22)    5.0000                  (N16754353) 149.0E-15                     
+
+(N16754411) 461.2E-24                 (N16754455) 30.33E-18                     
+
+(N16754545) 35.71E-18                 (N16754689) 1.569E-24                     
+
+(N16755031) 6.099E-27                 (N16755065) 30.33E-18                     
+
+(N16755101) 3.155E-30                 (N16755389) 922.9E-30                     
+
+(N16755425) 2.995E-06                 (N16755485) 432.1E-21                     
+
+(N16755919) 7.367E-18                 (N16771372)    0.0000                     
+
+(X_U13.191) 13.55E-15                 (N167545750) 1.569E-24                    
+
+(N167549451) 74.50E-15                (N167551691) 35.70E-18                    
+
+(N167555831)    0.0000                (N167556411)    0.0000                    
+
+(X_U13.XAMP.2)    -.3416              (X_U13.XAMP.3)    -.3416                  
+
+(X_U13.XAMP.5)    -.3473              (X_U13.XAMP.6)    -.3473                  
+
+(X_U13.XAMP.10)-79.00E-06             (X_U13.XAMP.13)    -.7028                 
+
+(X_U13.XDRIVE.2)   -5.0000            (X_U13.XDRIVE.3)   -5.0000                
+
+(X_U13.XLATCH.3)    3.5000            (X_U13.XLATCH.4)    3.4999                
+
+(X_U13.XLATCH.7)    3.5000            (X_U13.XLATCH.8) 100.0E-06                
+
+(X_U13.XLATCH.9) 100.0E-06            (X_U13.XLATCH.10) 100.0E-06               
+
+(X_U13.XLATCH.X1.5)    5.0000         (X_U13.XLATCH.X2.5)    5.0000             
+
+(X_U13.XLATCH.X3.5)    5.0000         (X_U13.XLATCH.X4.5)    5.0000             
+
+(X_U13.XLATCH.X5.5)    5.0000         (X_U13.XLATCH.X6.5)    5.0000             
+
+(X_U13.XLATCH.X7.3)    0.0000         (X_U13.XLATCH.X8.3)    5.0000         
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         6.265E-17
+    V_V3         4.958E-19
+    X_U10.VMa    9.225E-22
+    X_U5.VZ     -1.490E-10
+    X_U9.VMa     3.138E-24
+    X_U11.VFB    3.098E-17
+    X_U13.V3     1.000E-03
+    X_U13.V4    -9.281E-12
+
+    TOTAL POWER DISSIPATION   2.23E-09  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/11/22 11:37:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STARTUP-UCC28C42_startup"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UC
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =      344.81
+

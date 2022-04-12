@@ -1,0 +1,115 @@
+
+**** 04/12/22 18:43:26 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v2-buf-v2"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v2-buf\v2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "v2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../libs/dflz18.lib" 
+.LIB "../../../libs/ncp1252.lib" 
+.LIB "../../../libs/infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib" 
+.LIB "../../../ucc28c42.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 20m 5m {SCHEDULE(0,1000ns,6m,20ns)} SKIPBP 
+.OPTIONS STEPGMIN
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1u
+.OPTIONS CHGTOL= 0.1p
+.OPTIONS GMIN= 1.0E-10
+.OPTIONS ITL4= 5000
+.OPTIONS RELTOL= 0.01
+.OPTIONS VNTOL= 1m
+.PROBE64 V(*) I(*) D(*) 
+.INC "..\v2-buf.net" 
+
+
+
+**** INCLUDING v2-buf.net ****
+* source UCC28C42_V3
+C_C5         CS 0  330pF  
+R_R11         N16780462 +VDD  78.7  
+R_R16         N16780764 0  39k  
+C_C8         VREF 0  0.1uF  
+X_U35         N16780995 0 N16780958 TL431 
+R_RLOWER2         0 N16780958  4.7k  
+R_R23         VIN N05660  1.2  
+R_R4         FB +VOUT1  27.3k  
+C_C19         +VDD N16780646  47uF IC=12 
+C_C10         0 VIN  0.15uF  
+C_Cin         0 VIN  368u  TC=0,0 
+D_D5         N16780764 0 DI_S1K 
+R_R13         0 N16780750  10k  
+X_U8         COMP FB CS RTCT 0 OUT VDD VREF UCC28C42_STEADY
+C_C16         VDD 0  1uF IC=17 
+R_R20         0 N16780646  40m  
+R_R2         N16780836 0  24  
+R_R8         VDD N017711  37.4k  
+R_R17         N014770 +VDD  10  
+C_C9         N16780462 N16780457  150pF  
+R_R24         0 +VOUT1  2.8  
+R_RLED         N16780956 VOUT1  180  
+C_CZERO         N16780995 N16780958  10n IC=9 
+R_R9         0 +VDD  4.42k  
+X_U11         N16780266 N16780750 N16780785 IPA65R225C7_L0
+D_D6         N16780006 +VOUT1 ES3B 
+R_R22         N05223 N16780457  0.5  
+X_U10         N16779998 0 N16780003 VIN KBL06
+C_C14         +VOUT1 0  0.1uF IC=12 
+R_R18         0 +VOUT1  8.2k  
+C_C18         +VOUT1 N16780201  47uF IC=12 
+X_U5         0 VDD DI_SMAZ16
+R_R7         N017711 VIN  37.4k  
+C_C12         N009810 +VOUT1  150pF  
+R_R5         0 FB  3.9k  
+R_R59         N16780995 N16780956  1k  
+R_RUPPER2         N16780958 VOUT1  18k  
+C_C1         RTCT N16780836  470pF  
+D_D4         N16780457 N014770 ES3B 
+R_R6         FB N16780345  57.6k  
+R_R15         N16780006 N009810  78.7  
+C_C15         COMP FB  56pF  
+V_V2         N16779998 N16780003  AC 1
++SIN 0 220 50 0 0 0
+R_R10         CS N16780785  1k  
+R_R12         OUT N16780750  7.87  
+R_R19         0 N16780201  40m  
+R_R21         N03287 N16780006  0.5  
+R_R14         0 N16780785  176m  
+X_U32         N16780956 N16780995 FB 0 SFH615A_4 
+C_C17         VDD 0  0.1u IC=17 
+C_C11         N16780266 N16780764  220pF  
+C_C4         N16780345 COMP  56000pF  
+R_R25         0 +VDD  480  
+C_C2         VIN 0  10uF  
+R_R1         RTCT VREF  13.7k  
+D_D8         +VDD VDD D1N4148 
+L_L1         N02527 0  0192uH  
+R_R60         0 N02527  480  
+X_U2         0 0 0 0 XFMR PARAMS: RATIO=0.17
+X_U3         0 0 0 0 XFMR PARAMS: RATIO=0.1
+L_L2         N05660 N05660  0192uH  
+X_U112         N05660 N05660 0 N03287 N05223 0 XFMR2 PARAMS:  RATIO1=0.1
++  RATIO2=0.1
+.IC         V(FB )=2.5
+
+**** RESUMING v2.cir ****
+.END
+
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving L_L2. You may break the loop by adding a series resistance
+

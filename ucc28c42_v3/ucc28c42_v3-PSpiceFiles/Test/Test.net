@@ -1,0 +1,32 @@
+* source UCC28C42_V3
+L_La         0 N00378  15u  
+R_Rstart4         0 N00378  210k  
+L_Ls         0 N00232  15u  
+Kn_K2         L_Lm L_Ls 
++ L_La    1
+V_V3         N00224 0  AC 1
++SIN 0 220 50 0 0 0
+R_Rstart3         N00300 N02168  210k  
+L_Lm         N02256 0  1.5m  
+R_ESR_Lm         N02256 N00224  1  
+R_ESR_Ls         N02168 N00232  1  
+R_Rstart5         0 N00300  210k  
+X_Dz         0 N16740864 DI_SMAZ16
+V_V4         N16740857 0  AC 1
++SIN 0 30 50 0 0 0
+R_Rstart6         N16740864 N16740857  210k  
+C_Cin         0 N16776623  180u  TC=0,0 
+X_U10         N16776613 0 N16776741 N16776623 KBL06
+V_V2         N16776613 N16776741  AC 1
++SIN 0 220 50 0 0 0
+V_V5         N16777810 0  AC 1
++SIN 0 30 50 0 0 0
+R_Rstart7         N16777815 N16777810  210k  
+X_U37         0 N16777815 DI_DFLZ18
+R_Rstart8         0 N16778703  210k  
+L_L13         0 IN  1.5mH  
+V_V6         N16778537 0  AC 1
++SIN 0 220 50 0 0 0
+R_Rstart9         0 OUT  210k  
+X_U112         IN 0 OUT 0 0 N16778703 XFMR2 PARAMS:  RATIO1=0.5 RATIO2=0.5
+R_ESR_Lm1         IN N16778537  1  

@@ -1,0 +1,177 @@
+
+**** 04/12/22 18:42:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Test-Test"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-pspicefiles\test\test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../libs/dflz18.lib" 
+.LIB "../../../libs/ncp1252.lib" 
+.LIB "../../../libs/infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib" 
+.LIB "../../../ucc28c42.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1s 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Test.net" 
+
+
+
+**** INCLUDING Test.net ****
+* source UCC28C42_V3
+L_La         0 N00378  15u  
+R_Rstart4         0 N00378  210k  
+L_Ls         0 N00232  15u  
+Kn_K2         L_Lm L_Ls 
++ L_La    1
+V_V3         N00224 0  AC 1
++SIN 0 220 50 0 0 0
+R_Rstart3         N00300 N02168  210k  
+L_Lm         N02256 0  1.5m  
+R_ESR_Lm         N02256 N00224  1  
+R_ESR_Ls         N02168 N00232  1  
+R_Rstart5         0 N00300  210k  
+X_Dz         0 N16740864 DI_SMAZ16
+V_V4         N16740857 0  AC 1
++SIN 0 30 50 0 0 0
+R_Rstart6         N16740864 N16740857  210k  
+C_Cin         0 N16776623  180u  TC=0,0 
+X_U10         N16776613 0 N16776741 N16776623 KBL06
+V_V2         N16776613 N16776741  AC 1
++SIN 0 220 50 0 0 0
+V_V5         N16777810 0  AC 1
++SIN 0 30 50 0 0 0
+R_Rstart7         N16777815 N16777810  210k  
+X_U37         0 N16777815 DI_DFLZ18
+R_Rstart8         0 N16778703  210k  
+L_L13         0 IN  1.5mH  
+V_V6         N16778537 0  AC 1
++SIN 0 220 50 0 0 0
+R_Rstart9         0 OUT  210k  
+X_U112         IN 0 OUT 0 0 N16778703 XFMR2 PARAMS:  RATIO1=0.5 RATIO2=0.5
+R_ESR_Lm1         IN N16778537  1  
+
+**** RESUMING Test.cir ****
+.END
+
+**** 04/12/22 18:42:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Test-Test"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-pspicefiles\test\test.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_Dz.DF         X_Dz.DR         X_U10.DKBL06    X_U37.DF        
+          IS   25.700000E-12    5.150000E-15    1.323100E-06   22.900000E-12 
+           N    1.1             1.49            1.2911          1.1          
+         ISR                                   10.010000E-21                 
+          NR                                    4.995                        
+         IKF                                    1.9588                       
+          BV                                  600                            
+         IBV                                   10.000000E-06                 
+          RS     .756            .46            3.662300E-03     .689        
+          TT   50.100000E-09                   27.200000E-09   50.100000E-09 
+         CJO  377.000000E-12                   48.500000E-12  332.000000E-12 
+          VJ                                     .48                         
+           M     .33                             .32             .33         
+          EG                                     .72                         
+
+
+               X_U37.DR        
+          IS    4.580000E-15 
+           N    3            
+          RS    2.89         
+
+
+**** 04/12/22 18:42:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Test-Test"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-pspicefiles\test\test.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)    0.0000  (N00224)    0.0000 (N00232)    0.0000     
+
+(N00300)    0.0000 (N00378)    0.0000 (N02168)    0.0000 (N02256)    0.0000     
+
+(X_Dz.3)  -14.9000 (X_U37.3)  -15.6000                   (X_U112.5)    0.0000   
+
+(X_U112.6)    0.0000                  (N16740857)    0.0000                     
+
+(N16740864) 3.130E-06                 (N16776613) 192.6E-21                     
+
+(N16776623) 1.081E-18                 (N16776741) 192.6E-21                     
+
+(N16777810)    0.0000                 (N16777815) 3.277E-06                     
+
+(N16778537)    0.0000                 (N16778703)    0.0000                     
+
+(X_U112.20)    0.0000                 (X_U112.21)    0.0000                 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3         0.000E+00
+    V_V4         1.490E-11
+    V_V2         0.000E+00
+    V_V5         1.560E-11
+    V_V6         0.000E+00
+    X_Dz.VZ     -1.491E-11
+    X_U37.VZ    -1.561E-11
+    X_U112.VM1   0.000E+00
+    X_U112.VM2   0.000E+00
+
+    TOTAL POWER DISSIPATION   4.66E-10  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/12/22 18:42:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Test-Test"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-pspicefiles\test\test.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =       49.87
+  Total job time (using Solver 1)   =         .48
+

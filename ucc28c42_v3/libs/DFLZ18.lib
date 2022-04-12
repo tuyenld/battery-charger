@@ -1,0 +1,29 @@
+* Revised in 17.4 based on feedback in CCR- CCMPR01905980 
+* Library of diode model parameters
+*
+*  Copyright Cadence Design Systems, Inc. 2002 All Rights Reserved.
+*
+*
+* $Revision:   1.3  $
+* $Author:   HIRASUNA  $
+* $Date:   11 May 2000 13:26:32  $
+
+*----------------------------------------------------------------------------
+* Cadence Design Systems, Inc. would like to acknowledge Sandia National 
+* Laboratories for the contribution of their measurement-based models 
+* included in this library.
+* The parameters in this model library were derived from the data sheets for
+* each part.  Each part was characterized using the Model Editor.
+*----------------------------------------------------------------------------
+
+*SRC=DFLZ18;DI_DFLZ18;Diodes;Zener 10V-50V; 18.0V  1.00W   DIODES INC ZENER
+*SYM=HZEN
+.SUBCKT DI_DFLZ18  1 2
+*        Terminals    A   K
+D1 1 2 DF
+DZ 3 1 DR
+VZ 2 3 15.6
+.MODEL DF D ( IS=22.9p RS=0.689 N=1.10
++ CJO=332p VJ=1.00 M=0.330 TT=50.1n )
+.MODEL DR D ( IS=4.58f RS=2.89 N=3.00 )
+.ENDS

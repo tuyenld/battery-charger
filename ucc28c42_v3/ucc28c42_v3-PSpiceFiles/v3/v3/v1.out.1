@@ -1,0 +1,484 @@
+
+**** 04/11/22 14:15:44 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v1-v1"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v1\v1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "v1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../libs/ncp1252.lib" 
+.LIB "../../../libs/infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib" 
+.LIB "../../../ucc28c42.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 20m 0m 5ns SKIPBP 
+.OPTIONS STEPGMIN
+.OPTIONS ABSTOL= 1p
+.OPTIONS ITL2= 50
+.OPTIONS RELTOL= 0.01
+.OPTIONS VNTOL= 1u
+.PROBE64 V(*) I(*) D(*) 
+.INC "..\v1.net" 
+
+
+
+**** INCLUDING v1.net ****
+* source UCC28C42_V3
+D_D6         N16780006 +VOUT1 ES3B 
+L_L1         N16780079 N16780266  0192uH  
+R_R25         0 +VDD  480  
+R_R13         0 N16780750  10k  
+X_U10         N16779998 0 N16780003 VIN KBL06
+R_R19         0 N16780201  40m  
+C_C8         VREF 0  0.1uF  
+C_C18         +VOUT1 N16780201  47uF IC=12 
+R_R2         N16780836 0  24  
+V_V2         N16779998 N16780003  AC 1
++SIN 0 220 50 0 0 0
+X_U5         0 VDD DI_SMAZ16
+X_U8         COMP FB CS RTCT 0 OUT VDD VREF UCC28C42_STEADY
+C_C10         0 VIN  0.15uF  
+X_U32         N16780956 N16780995 FB 0 SFH615A_4 
+R_R18         0 +VOUT1  8.2k  
+X_U11         N16780266 N16780750 N16780785 IPA65R225C7_L0
+C_Cin         0 VIN  368u  TC=0,0 
+X_U3         N16780079 N16780266 0 N16780582 XFMR PARAMS: RATIO=0.1
+R_R59         N16780995 N16780956  1k  
+C_C17         VDD 0  0.1u IC=17 
+R_R15         N16780006 N167799830  78.7  
+C_C14         +VOUT1 0  0.1uF IC=12 
+R_R20         0 N16780646  40m  
+C_C5         CS 0  330pF  
+D_D8         +VDD VDD D1N4148 
+C_C16         VDD 0  1uF IC=17 
+R_R14         0 N16780785  176m  
+X_U2         N16780079 N16780266 0 N16780104 XFMR PARAMS: RATIO=0.17
+C_CZERO         N16780995 N16780958  10n IC=9 
+R_R4         FB +VOUT1  27.3k  
+C_C12         N167799830 +VOUT1  150pF  
+C_C15         COMP FB  56pF  
+R_R1         RTCT VREF  13.7k  
+D_D5         N16780764 0 DI_S1K 
+R_R22         N16780582 N16780457  0.5  
+R_R6         FB N16780345  57.6k  
+C_C19         +VDD N16780646  47uF IC=12 
+C_C2         VIN 0  10uF  
+R_RLED         N16780956 VOUT1  180  
+R_R12         OUT N16780750  7.87  
+C_C1         RTCT N16780836  470pF  
+X_U35         N16780995 0 N16780958 TL431 
+D_D4         N16780457 N167805190 ES3B 
+R_R9         0 +VDD  4.42k  
+R_R23         VIN N16780079  1.2  
+C_C4         N16780345 COMP  56000pF  
+R_R24         0 +VOUT1  2.8  
+R_RUPPER2         N16780958 VOUT1  18k  
+C_C11         N16780266 N16780764  220pF  
+R_R16         N16780764 0  39k  
+R_R5         0 FB  3.9k  
+R_R17         N167805190 +VDD  10  
+R_RLOWER2         0 N16780958  4.7k  
+R_R21         N16780104 N16780006  0.5  
+C_C9         N16780462 N16780457  150pF  
+R_R7         N167801331 VIN  37.4k  
+R_R10         CS N16780785  1k  
+R_R8         VDD N167801331  37.4k  
+R_R11         N16780462 +VDD  78.7  
+.IC         V(FB )=2.5
+
+**** RESUMING v1.cir ****
+.END
+
+**** 04/11/22 14:15:44 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v1-v1"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v1\v1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               ES3B            D1N4148         DI_S1K          X_U10.DKBL06    
+          IS    7.270000E-12    2.682000E-09    7.310000E-18    1.323100E-06 
+           N     .7             1.836            .775           1.2911       
+         ISR                    1.565000E-09                   10.010000E-21 
+          NR                                                    4.995        
+         IKF                     .04417                         1.9588       
+          BV  100             100             800             600            
+         IBV   10.000000E-06  100.000000E-06    5.000000E-06   10.000000E-06 
+          RS     .0224           .5664           .042           3.662300E-03 
+          TT   36.000000E-09   11.540000E-09    4.320000E-06   27.200000E-09 
+         CJO   83.200000E-12    4.000000E-12   42.400000E-12   48.500000E-12 
+          VJ                     .5                              .48         
+           M     .333            .3333           .333            .32         
+          EG                                                     .72         
+
+
+               X_U5.DF         X_U5.DR         X_U8.D2         X_U32.LED       
+          IS   25.700000E-12    5.150000E-15   10.000000E-15    4.940000E-21 
+           N    1.1             1.49                            1.01         
+          RS     .756            .46                            3.830000E-03 
+          TT   50.100000E-09                                    1.000000E-09 
+         CJO  377.000000E-12                                   13.000000E-12 
+           M     .33                                             .333        
+
+
+               X_U11.Dbt       X_U11.DBODY     X_U11.DGD       X_U35.DN4148    
+          IS   10.000000E-15  554.480000E-09   10.000000E-15    7.000000E-09 
+           N                    1.95                            2            
+          BV  650                                             100            
+          RS                   28.000000E-06                     .8          
+          TT                  250.000000E-09                    6.000000E-09 
+         CJO    1.640000E-09                  230.000000E-12    4.000000E-12 
+          VJ     .5                              .5              .6          
+           M     .9                              .55             .45         
+          EG                    1.12                                         
+
+
+               X_U35.D2_mod    X_U35.D3_mod    
+          IS    7.000000E-09   10.000000E-15 
+           N    1.3              .01         
+          BV   36                            
+          RS     .8                          
+          TT    6.000000E-09                 
+         CJO    4.000000E-12                 
+          VJ     .6                          
+           M     .45                         
+
+
+               X_U8.XAMP.DCLAMP                X_U8.XAMP.DMOD  
+          IS   10.000000E-15                   10.000000E-15 
+          BV    6.8                                          
+         IBV     .01                                         
+          RS   10                                            
+
+
+**** 04/11/22 14:15:44 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v1-v1"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v1\v1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U32.MPSA06    X_U35.QN3904    X_U8.XAMP.QPMOD 
+               NPN             NPN             PNP             
+       LEVEL    1               1               1            
+          IS   20.300000E-15   14.000000E-15  100.000000E-18 
+          EG    1.12                                         
+          BF  343             300             217.647        
+          NF    1               1               1            
+         VAF   25             100                            
+         IKF     .0396           .025                        
+         ISE    1.190000E-12  300.000000E-15                 
+          NE    2                                            
+          BR   10               7.5             1            
+          NR    1               1               1            
+         VAR   16                                            
+         IKR     .075                                        
+         ISS    0               0               0            
+          RB   92.6                                          
+          RE   23.1             0               0            
+          RC    9.26            2.4             0            
+         CJE   20.700000E-12    4.500000E-12    0            
+         VJE    1.1              .75             .75         
+         MJE     .5                                          
+         CJC   10.000000E-12    3.500000E-12    0            
+         VJC     .3              .75             .75         
+         MJC     .5              .33             .33         
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          TF    4.000000E-09  400.000000E-12                 
+          TR  500.000000E-09   21.000000E-09                 
+         XTB    1.5             1.5                          
+          KF    0             900.000000E-18    0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.2          
+           D     .87             .87             .52         
+
+
+**** 04/11/22 14:15:44 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v1-v1"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v1\v1.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U11.DMOS      X_U11.MVDR      X_U11.sw        
+               NMOS            NMOS            NMOS            
+       LEVEL    3               1               1            
+           L  100.000000E-06  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06  100.000000E-06 
+         VTO    4.2            -1               0            
+          KP   13.91           27.87           10            
+       GAMMA    0               0               0            
+         PHI     .6              .6              .6          
+      LAMBDA    0                .15            0            
+          IS   10.000000E-15   10.000000E-15   10.000000E-15 
+          JS    0               0               0            
+          PB     .8              .8              .8          
+        PBSW     .8              .8              .8          
+          CJ    0               0               0            
+        CJSW    0               0               0            
+        CGSO    0               0               0            
+        CGDO    0               0               0            
+        CGBO    0               0               0            
+         TOX  100.000000E-09    0               0            
+          XJ    0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03 
+        VMAX  150.000000E+03                                 
+         ETA    0                                            
+      DIOMOD    1               1               1            
+         VFB    0               0               0            
+        LETA    0               0               0            
+        WETA    0               0               0            
+          U0    0               0               0            
+        TEMP    0               0               0            
+         VDD    5               5               5            
+       XPART    0               0               0            
+
+
+               X_U8.XDRIVE._NMOS 
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    3            
+          KP    1            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD   10            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ  101.851000E-09 
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+        NSUB    1.000000E+09 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+               X_U8.XDRIVE._PMOS 
+               PMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO   -3            
+          KP    1            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD    5.5          
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ  101.851000E-09 
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+        NSUB    1.000000E+09 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 04/11/22 14:15:44 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v1-v1"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v1\v1.sim ] 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U8.SOSC       X_U8.SUVLO      
+         RON     .01             .01         
+        ROFF    1.000000E+06   10.000000E+06 
+          VT    1.45           11.75         
+          VH     .95            2.75         
+          TD    0               0            
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  86.22E-12.
+         Time step =  202.5E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U11.g1)               =   -41.87mV  \     2.994V
+    V(X_U11.d1)               =   -80.70mV  \     2.955V
+    V(X_U11.s1)               =   -81.18mV  \     2.955V
+    V(X_U11.s2)               =   -81.12mV  \     2.955V
+    V(X_U11.g2)               =   -79.04mV  \     2.957V
+    V(X_U11.d2)               =   -81.07mV  \     2.955V
+    V(X_U11.d1a)              =   -80.77mV  \     2.955V
+    V(X_U11.d2a)              =   -80.77mV  \     2.955V
+    V(X_U11.21)               =   -80.70mV  \     2.955V
+    V(X_U11.c)                =   -83.11mV  \     2.953V
+    V(X_U11.a)                =   -81.07mV  \     2.955V
+    V(X_U11.b)                =   -81.07mV  \     2.955V
+    V(X_U11.d)                =   -77.00mV  \     2.959V
+
+  These supply currents failed to converge:
+
+    I(X_U8.EMY19)             =   -8.384mA  \    21.27KA
+    I(X_U11.Eaux)             =    1.863nA  \   -29.10pA
+    I(X_U8.V4)                =   232.83pA  \   -4.775pA
+
+  These devices failed to converge:
+    X_U11.Dgd X_U8.GB6  X_U32.Q1  
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   CS) 985.9E-09  (   FB)    2.5436  (  OUT)   11.0070  (  VDD)   16.9980      
+
+(  VIN)-269.3E-09  ( +VDD)   11.9540  ( COMP)     .0452  ( RTCT)    -.2012      
+
+( VREF) 1.419E-06  (VOUT1)    -.0929  (+VOUT1)   11.9910 (X_U2.5) 1.436E-06     
+
+(X_U2.6) 1.436E-06 (X_U3.5) 1.139E-06 (X_U3.6) 1.139E-06 (X_U5.3)    2.0985     
+
+(X_U8.5)    0.0000 (X_U8.6)    3.5628 (X_U8.7)     .2094 (X_U8.8) 1.290E-06     
+
+(X_U8.9)    -.9548 (X_U11.a)    -.0811                   (X_U11.b)    -.0811    
+
+(X_U11.c)    -.0831                   (X_U11.d)    -.0770                       
+
+(X_U32.4)     .0188                   (X_U32.6)    -.0038                       
+
+(X_U32.7)-3.686E-06                   (X_U32.8)-1.274E-09                       
+
+(X_U35.1)    -.0056                   (X_U35.2)    -.0059                       
+
+(X_U35.5)    2.4900                   (X_U35.7)-64.76E-06                       
+
+(X_U8.10)    5.0000                   (X_U8.11)-964.8E-09                       
+
+(X_U8.12)-2.894E-06                   (X_U8.13)    5.0000                       
+
+(X_U8.16)-964.8E-09                   (X_U8.19)   16.9980                       
+
+(X_U8.21)    5.0000                   (X_U8.22)     .0022                       
+
+(X_U11.21)    -.0807                  (X_U11.d1)    -.0807                      
+
+(X_U11.d2)    -.0811                  (X_U11.g1)    -.0419                      
+
+(X_U11.g2)    -.0790                  (X_U11.s1)    -.0812                      
+
+(X_U11.s2)    -.0811                  (X_U8.191)   16.9980                      
+
+(N16779998) 2.845E-06                 (N16780003)-3.114E-06                     
+
+(N16780006)     .9694                 (N16780079)    -.4297                     
+
+(N16780104)     .2513                 (N16780201)    -.0089                     
+
+(N16780266)    1.0487                 (N16780345)     .0452                     
+
+(N16780457)     .7175                 (N16780462)     .7984                     
+
+(N16780582)     .1478                 (N16780646)    -.0465                     
+
+(N16780750)   10.7650                 (N16780764)     .5860                     
+
+(N16780785)     .0056                 (N16780836)    -.2012                     
+
+(N16780956)    -.0038                 (N16780958)   -8.9990                     
+
+(N16780995)-550.9E-06                 (X_U11.d1a)    -.0808                     
+
+(X_U11.d2a)    -.0808                 (N167799830)   11.9300                    
+
+(N167801331)    8.4992                (N167805190)    1.9784                    
+
+(X_U8.XAMP.2)-1.461E-06               (X_U8.XAMP.3)-28.99E-06                   
+
+(X_U8.XAMP.5)    -.0025               (X_U8.XAMP.6)    -.0025                   
+
+(X_U8.XAMP.10) 709.5E-09              (X_U8.XAMP.13)    -.5853                  
+
+(X_U8.XDRIVE.2)    6.0070             (X_U8.XDRIVE.3)    8.3177                 
+
+(X_U8.XLATCH.3)    3.6222             (X_U8.XLATCH.4)    3.6222                 
+
+(X_U8.XLATCH.7)    3.5628             (X_U8.XLATCH.8)     .2094                 
+
+(X_U8.XLATCH.9)     .2094             (X_U8.XLATCH.10)     .2094                
+
+(X_U8.XLATCH.X1.5)    5.0000          (X_U8.XLATCH.X2.5)    5.0000              
+
+(X_U8.XLATCH.X3.5)    5.0000          (X_U8.XLATCH.X4.5)    5.0000              
+
+(X_U8.XLATCH.X5.5)    5.0000          (X_U8.XLATCH.X6.5)    5.0000              
+
+(X_U8.XLATCH.X7.3)    5.0000          (X_U8.XLATCH.X8.3)    5.0000          
+
+
+**** Interrupt ****

@@ -1,0 +1,595 @@
+
+**** 04/11/22 13:48:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STEADYSTATE-UCC28C42_SS"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UCC
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "UCC28C42_SS.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../libs/ncp1252.lib" 
+.LIB "../../../libs/infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib" 
+.LIB "../../../ucc28c42.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 20m 0m 5ns SKIPBP 
+.OPTIONS STEPGMIN
+.OPTIONS ABSTOL= 1p
+.OPTIONS ITL2= 50
+.OPTIONS RELTOL= 0.01
+.OPTIONS VNTOL= 1u
+.PROBE64 V(*) I(*) D(*) 
+.INC "..\UCC28C42_STEADYSTATE.net" 
+
+
+
+**** INCLUDING UCC28C42_STEADYSTATE.net ****
+* source UCC28C42_V3
+R_R_CSF         CS N16740487  3.8k  
+C_C_COMPp         N16739891 N16795961  10n  
+R_R_SNUB         N16740667 N16792529  50k  
+R_R_COMPp         N16795961 N16739891  10k  
+R_R24         0 N16739745  2.8  
+C_C11         N16740517 N16739639  220pF  
+R_R_CS         0 N16740487  0.75  
+R_R_G         N16739909 N16740981  10  
+X_Dz         0 N16739635 DI_SMAZ16
+D_D5         N16739639 0 DI_S1K 
+R_R_bleeder         0 N16740981  10k  
+C_Cramp         N167402430 N167400091  10n  
+R_Rramp         N167400091 CS  24.9k  
+R_Rstart1         N167412151 N16740667  210k  
+D_D_OUT         N16799559 N16739745 ES3B 
+C_C_VDD         N16739635 0  120u IC=17 
+R_R16         N16739639 0  39k  
+D_D8         N167410070 N16739635 D1N4148 
+C_C_CSF         CS 0  100pF  
+C_C_SNUB         N16792529 N16740667  10n  
+X_UCC28C42         N16739891 N16795961 CS N16740021 0 N16739909 N16739635
++  N16739993 UCC28C42_STEADY
+V_V2         N16776491 N16788555  AC 1
++SIN 0 220 50 0 0 0
+C_Cin         0 0  180u  TC=0,0 
+X_U10         N16776491 0 N16788555 N16740667 KBL06
+X_Qsw         N16740517 N16740981 N16740487 IPA65R225C7_L0
+R_R_FBU         N16783477 N16739745  9.53k  
+R_RLED         N16783475 N16739745  1.3k  
+C_C_COMPZ         N16794799 N16783477  10n IC=9 
+X_U32         N16783475 N16783514 N16739993 N16795738 SFH615A_4 
+R_R_TLbias         N16783514 N16739745  1k  
+R_R_FBB         0 N16783477  2.49k  
+Kn_K1         L_Lm L_Ls 
++ L_La    1
+L_Lm         N16799264 N16740517  1.5m  
+L_Ls         0 N16741085  15u  
+L_La         0 N16799425  15u  
+R_R_VDD         N16797419 N167410070  37.4k  
+R_Rstart2         N16739635 N167412151  210k  
+C_C_VDDbp         N16739635 0  0.1u IC=17 
+C_Cvref         N16739993 0  1u IC=17 
+D_D_CLAMP         N16740517 N16792529 DI_S1K 
+C_C_OUT         N16739745 0  2200u  
+R_R_COMPZ         N16794799 N16783514  88.7k  
+R_R_FBG         N16795738 N16795961  4.99k  
+R_R_OPTO         N16795738 0  1k  
+X_Q2         0 N16796480 N16739891 awb2n2907 PARAMS:                           
++                  
+C_Css         N16796480 0  470pF  
+R_Rss         N16739993 N16796480  13.7k  
+Q_Q3         N16739993 N16740021 N167402430 Q2N2222A/ZTX 
+R_Rrt         N16739993 N16740021  15.4k  
+C_Cct         N16740021 0  1000p  
+R_ESR_Lm         N16799264 N16740667  0.5  
+R_ESR_La         N16799425 N16797419  0.5  
+R_ESR_Ls         N16799559 N16741085  0.5  
+X_U36         N16783477 0 N16783514 TL431/TI
+
+**** RESUMING UCC28C42_SS.cir ****
+.END
+
+**** 04/11/22 13:48:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STEADYSTATE-UCC28C42_SS"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UCC
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DI_S1K          ES3B            D1N4148         X_Dz.DF         
+          IS    7.310000E-18    7.270000E-12    2.682000E-09   25.700000E-12 
+           N     .775            .7             1.836           1.1          
+         ISR                                    1.565000E-09                 
+         IKF                                     .04417                      
+          BV  800             100             100                            
+         IBV    5.000000E-06   10.000000E-06  100.000000E-06                 
+          RS     .042            .0224           .5664           .756        
+          TT    4.320000E-06   36.000000E-09   11.540000E-09   50.100000E-09 
+         CJO   42.400000E-12   83.200000E-12    4.000000E-12  377.000000E-12 
+          VJ                                     .5                          
+           M     .333            .333            .3333           .33         
+
+
+               X_Dz.DR         X_UCC28C42.D2   X_U10.DKBL06    X_Qsw.Dbt       
+          IS    5.150000E-15   10.000000E-15    1.323100E-06   10.000000E-15 
+           N    1.49                            1.2911                       
+         ISR                                   10.010000E-21                 
+          NR                                    4.995                        
+         IKF                                    1.9588                       
+          BV                                  600             650            
+         IBV                                   10.000000E-06                 
+          RS     .46                            3.662300E-03                 
+          TT                                   27.200000E-09                 
+         CJO                                   48.500000E-12    1.640000E-09 
+          VJ                                     .48             .5          
+           M                                     .32             .9          
+          EG                                     .72                         
+
+
+               X_Qsw.DBODY     X_Qsw.DGD       X_U32.LED       X_U36.DMOD1     
+          IS  554.480000E-09   10.000000E-15    4.940000E-21   10.000000E-15 
+           N    1.95                            1.01                         
+          RS   28.000000E-06                    3.830000E-03     .3          
+          TT  250.000000E-09                    1.000000E-09                 
+         CJO                  230.000000E-12   13.000000E-12                 
+          VJ                     .5                                          
+           M                     .55             .333                        
+          EG    1.12                                                         
+
+
+               X_U36.DMOD2     X_UCC28C42.XAMP.DCLAMP 
+          IS   10.000000E-15   10.000000E-15 
+          BV                    6.8          
+         IBV                     .01         
+          RS    1.000000E-06   10            
+
+
+               X_UCC28C42.XAMP.DMOD 
+          IS   10.000000E-15 
+
+
+**** 04/11/22 13:48:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STEADYSTATE-UCC28C42_SS"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UCC
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N2222A/ZTX    X_U32.MPSA06    X_Q2.model7     
+               NPN             NPN             PNP             
+       LEVEL    1               1               1            
+          IS   30.611000E-15   20.300000E-15  140.810000E-15 
+          EG                    1.12            1.11         
+          BF  220             343             150            
+          NF    1.00124         1               1.073        
+         VAF  104              25             125            
+         IKF     .52             .0396           .5          
+         ISE    7.500000E-15    1.190000E-12  964.740000E-15 
+          NE    1.41            2               1.74         
+          BR    4              10               4.12         
+          NR    1.005           1               1.073        
+         VAR   28              16             500            
+         IKR     .24             .075                        
+         ISC   10.652500E-12                                 
+          NC    1.3728                          1            
+         ISS    0               0               0            
+          RB     .13           92.6             7            
+          RE     .22           23.1              .05         
+          RC     .12            9.26             .8          
+         CJE   27.010000E-12   20.700000E-12   29.000000E-12 
+         VJE     .75            1.1             1            
+         MJE                     .5              .252        
+         CJC    9.120000E-12   10.000000E-12   16.000000E-12 
+         VJC     .4089           .3             1.91         
+         MJC     .3508           .5              .633        
+        XCJC    1               1                .5          
+         CJS    0               0               0            
+         VJS     .75             .75             .7          
+         MJS                                     .5          
+          TF  325.000000E-12    4.000000E-09  636.620000E-12 
+         XTF                                   22.59         
+         VTF                                    2.96         
+         ITF                                     .61773      
+          TR  100.000000E-09  500.000000E-09   43.550000E-09 
+         XTB                    1.5             2.46         
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.2          
+           D     .87             .87             .52         
+
+
+               X_UCC28C42.XAMP.QPMOD 
+               PNP             
+       LEVEL    1            
+          IS  100.000000E-18 
+          BF  217.647        
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 04/11/22 13:48:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STEADYSTATE-UCC28C42_SS"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UCC
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_Qsw.DMOS      X_Qsw.MVDR      X_Qsw.sw        
+               NMOS            NMOS            NMOS            
+       LEVEL    3               1               1            
+           L  100.000000E-06  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06  100.000000E-06 
+         VTO    4.2            -1               0            
+          KP   13.91           27.87           10            
+       GAMMA    0               0               0            
+         PHI     .6              .6              .6          
+      LAMBDA    0                .15            0            
+          IS   10.000000E-15   10.000000E-15   10.000000E-15 
+          JS    0               0               0            
+          PB     .8              .8              .8          
+        PBSW     .8              .8              .8          
+          CJ    0               0               0            
+        CJSW    0               0               0            
+        CGSO    0               0               0            
+        CGDO    0               0               0            
+        CGBO    0               0               0            
+         TOX  100.000000E-09    0               0            
+          XJ    0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03 
+        VMAX  150.000000E+03                                 
+         ETA    0                                            
+      DIOMOD    1               1               1            
+         VFB    0               0               0            
+        LETA    0               0               0            
+        WETA    0               0               0            
+          U0    0               0               0            
+        TEMP    0               0               0            
+         VDD    5               5               5            
+       XPART    0               0               0            
+
+
+               X_UCC28C42.XDRIVE._NMOS 
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    3            
+          KP    1            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD   10            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ  101.851000E-09 
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+        NSUB    1.000000E+09 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+               X_UCC28C42.XDRIVE._PMOS 
+               PMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO   -3            
+          KP    1            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD    5.5          
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ  101.851000E-09 
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+        NSUB    1.000000E+09 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 04/11/22 13:48:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STEADYSTATE-UCC28C42_SS"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UCC
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U36.RMOD      
+           R    1            
+         TC1   14.000000E-06 
+         TC2   -1.000000E-06 
+
+
+**** 04/11/22 13:48:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STEADYSTATE-UCC28C42_SS"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UCC
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_UCC28C42.SOSC X_UCC28C42.SUVLO 
+         RON     .01             .01         
+        ROFF    1.000000E+06   10.000000E+06 
+          VT    1.45           11.75         
+          VH     .95            2.75         
+          TD    0               0            
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  9.717E-06.
+         Time step =  97.39E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(N16783477)              =  -174.36mV  \  -191.48mV
+    V(N16783475)              =    4.307uV  \   -1.403uV
+    V(X_Qsw.g1)               =   599.99mV  \  -436.36uV
+    V(X_Qsw.d1)               =     1.046V  \   445.23mV
+    V(X_Qsw.s1)               =   599.92mV  \  -507.77uV
+    V(X_Qsw.s2)               =   599.92mV  \  -507.67uV
+    V(X_Qsw.g2)               =   600.00mV  \  -425.02uV
+    V(X_Qsw.d2)               =     1.046V  \   445.22mV
+    V(X_Qsw.d1a)              =     1.046V  \   445.23mV
+    V(X_Qsw.d2a)              =     1.046V  \   445.23mV
+    V(X_Qsw.21)               =     1.046V  \   445.23mV
+    V(X_Qsw.c)                =     1.046V  \   445.22mV
+    V(X_Qsw.a)                =   600.00mV  \  -422.96uV
+    V(X_Qsw.b)                =     1.048V  \   447.77mV
+    V(X_Qsw.d)                =   154.36mV  \  -446.07mV
+    V(X_U32.6)                =    4.307uV  \   -1.403uV
+
+  These supply currents failed to converge:
+
+    I(X_Qsw.Eaux)             =    40.02nA  \    74.49pA
+    I(L_Ls)                   =    1.706uA  \  -155.11nA
+    I(X_Dz.VZ)                =     2.350A  \     1.489A
+    I(X_UCC28C42.V4)          =    5.630uA  \   460.70nA
+    I(X_U32.VM)               =   -3.050nA  \    1.343nA
+
+  These devices failed to converge:
+    D_D5      D_D8      D_D_CLAMP X_Dz.D1   X_Qsw.Dbd X_U32.D1  X_U32.Q1  
+    X_Q2.Q2n2907_0 
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   CS)     .2324  (X_Dz.3)    1.9685 (X_Qsw.a)     .6000                       
+
+(X_Qsw.b)    1.0482                   (X_Qsw.c)    1.0456                       
+
+(X_Qsw.d)     .1544                   (X_U32.4)     .9741                       
+
+(X_U32.6) 4.307E-06                   (X_U32.7)-22.87E-12                       
+
+(X_U32.8) 10.00E-12                   (X_U36.4)    2.4950                       
+
+(X_U36.5) 1895.2000                   (X_U36.6) 1896.6000                       
+
+(X_U36.7) 1895.2000                   (X_Qsw.21)    1.0457                      
+
+(X_Qsw.d1)    1.0457                  (X_Qsw.d2)    1.0456                      
+
+(X_Qsw.g1)     .6000                  (X_Qsw.g2)     .6000                      
+
+(X_Qsw.s1)     .5999                  (X_Qsw.s2)     .5999                      
+
+(N16739635)   16.8690                 (N16739639)     .3105                     
+
+(N16739745) 342.3E-09                 (N16739891)    2.8385                     
+
+(N16739909) 66.72E-06                 (N16739993)    4.9998                     
+
+(N16740021)    2.4000                 (N16740487) 85.51E-06                     
+
+(N16740517)     .4458                 (N16740667)     .4498                     
+
+(N16740981) 157.3E-06                 (N16741085)-390.6E-06                     
+
+(N16776491)     .5607                 (N16783475) 4.307E-06                     
+
+(N16783477)    -.1744                 (N16783514)     .0972                     
+
+(N16788555)    -.1109                 (N16792529)     .4497                     
+
+(N16794799)    8.7307                 (N16795738)     .4366                     
+
+(N16795961)    2.4965                 (N16796480)    3.8923                     
+
+(N16797419)-390.9E-06                 (N16799264)     .4497                     
+
+(N16799425)-390.9E-06                 (N16799559)-391.4E-06                     
+
+(X_Qsw.d1a)    1.0457                 (X_Qsw.d2a)    1.0457                     
+
+(N167400091)    1.8139                (N167402430)    1.8447                    
+
+(N167410070)-610.8E-06                (N167412151)    8.6592                    
+
+(X_UCC28C42.5)    0.0000              (X_UCC28C42.6)    5.0000                  
+
+(X_UCC28C42.7)    0.0000              (X_UCC28C42.8)    4.5453                  
+
+(X_UCC28C42.9)    1.8385              (X_UCC28C42.10)    5.0000                 
+
+(X_UCC28C42.11)     .4607             (X_UCC28C42.12)    1.3821                 
+
+(X_UCC28C42.13)    5.0000             (X_UCC28C42.16)     .4607                 
+
+(X_UCC28C42.19)   16.8690             (X_UCC28C42.21)    0.0000                 
+
+(X_UCC28C42.22) 136.8E-21             (X_UCC28C42.191)   16.8690                
+
+(X_UCC28C42.XAMP.2)    2.6639         (X_UCC28C42.XAMP.3)    2.6626             
+
+(X_UCC28C42.XAMP.5)    2.7124         (X_UCC28C42.XAMP.6)    2.7124             
+
+(X_UCC28C42.XAMP.10)    2.4999        (X_UCC28C42.XAMP.13)    2.0781            
+
+(X_UCC28C42.XDRIVE.2)   -4.9999       (X_UCC28C42.XDRIVE.3)   -4.9999           
+
+(X_UCC28C42.XLATCH.3)    5.0000       (X_UCC28C42.XLATCH.4)    5.0000           
+
+(X_UCC28C42.XLATCH.7)    0.0000       (X_UCC28C42.XLATCH.8)    5.0000           
+
+(X_UCC28C42.XLATCH.9)    0.0000       (X_UCC28C42.XLATCH.10)    5.0000          
+
+(X_UCC28C42.XLATCH.X1.5)    5.0000    (X_UCC28C42.XLATCH.X2.5)    0.0000        
+
+(X_UCC28C42.XLATCH.X3.5)    0.0000    (X_UCC28C42.XLATCH.X4.5)    5.0000        
+
+(X_UCC28C42.XLATCH.X5.5)    5.0000    (X_UCC28C42.XLATCH.X6.5)    0.0000        
+
+(X_UCC28C42.XLATCH.X7.3)    5.0000    (X_UCC28C42.XLATCH.X8.3)    5.0000    
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.01
+**** Param: ABSTOL = 1e-12
+**** Param: VNTOL = 1e-06
+**** Param: GMIN = 1e-12
+**** Param: TSTOP = 0.02
+**** Param: TMAX = 5e-09
+**** Param: ITL1 = 150
+**** Param: ITL2 = 50
+**** Param: ITL4 = 10
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-10
+**** Param: ADVCONV = 0
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 1
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+The following unused Convergence options can be added to simulation:
+CSHUNT=1e-12
+TRANCONV
+DIODERS=1e-4
+DIODECJO=2e-12
+BJTCJ=1e-11
+JFETCJ=1e-12
+MOSCJ=1e-12
+AutoConverge
+
+          JOB ABORTED
+
+**** 04/11/22 13:48:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "UCC28C42_STEADYSTATE-UCC28C42_SS"  [ e:\sdu-courses\2022-spring\edb2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\UCC
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =    15127.56
+  Total job time (using Solver 1)   =    12537.69
+

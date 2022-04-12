@@ -1,0 +1,4 @@
+ lib=E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\libs\dflz18.lib, offset=831, size=214
+ lib=E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\libs\ncp1252.lib, offset=706, size=257
+ lib=E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42.lib, offset=9037, size=230
+ lib=C:\Cadence\SPB_17.4\tools\PSpice\Library\diode_fullbridge.lib, offset=21899, size=297

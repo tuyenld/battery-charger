@@ -1,0 +1,389 @@
+
+**** 04/12/22 18:45:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v2-buf-v2"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v2-buf\v2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "v2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../libs/dflz18.lib" 
+.LIB "../../../libs/ncp1252.lib" 
+.LIB "../../../libs/infineon_simulation model_coolmos_c7_mosfet_650v_spice.lib" 
+.LIB "../../../ucc28c42.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Dinh-Tuyen Le\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 20m 5m {SCHEDULE(0,1000ns,6m,20ns)} SKIPBP 
+.OPTIONS STEPGMIN
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1u
+.OPTIONS CHGTOL= 0.1p
+.OPTIONS GMIN= 1.0E-10
+.OPTIONS ITL4= 5000
+.OPTIONS RELTOL= 0.01
+.OPTIONS VNTOL= 1m
+.PROBE64 V(*) I(*) D(*) 
+.INC "..\v2-buf.net" 
+
+
+
+**** INCLUDING v2-buf.net ****
+* source UCC28C42_V3
+C_C5         CS 0  330pF  
+R_R11         N16780462 +VDD  78.7  
+R_R16         N16780764 0  39k  
+C_C8         VREF 0  0.1uF  
+X_U35         N16780995 0 N16780958 TL431 
+R_RLOWER2         0 N16780958  4.7k  
+R_R23         VIN N05909  1.2  
+R_R4         FB +VOUT1  27.3k  
+C_C19         +VDD N16780646  47uF IC=12 
+C_C10         0 VIN  0.15uF  
+C_Cin         0 VIN  368u  TC=0,0 
+D_D5         N16780764 0 DI_S1K 
+R_R13         0 N16780750  10k  
+X_U8         COMP FB CS RTCT 0 OUT VDD VREF UCC28C42_STEADY
+C_C16         VDD 0  1uF IC=17 
+R_R20         0 N16780646  40m  
+R_R2         N16780836 0  24  
+R_R8         VDD N017711  37.4k  
+R_R17         N014770 +VDD  10  
+C_C9         N16780462 N16780457  150pF  
+R_R24         0 +VOUT1  2.8  
+R_RLED         N16780956 VOUT1  180  
+C_CZERO         N16780995 N16780958  10n IC=9 
+R_R9         0 +VDD  4.42k  
+X_U11         N05660 N16780750 N16780785 IPA65R225C7_L0
+D_D6         N16780006 +VOUT1 ES3B 
+R_R22         N05223 N16780457  0.5  
+X_U10         N16779998 0 N16780003 VIN KBL06
+C_C14         +VOUT1 0  0.1uF IC=12 
+R_R18         0 +VOUT1  8.2k  
+C_C18         +VOUT1 N16780201  47uF IC=12 
+X_U5         0 VDD DI_SMAZ16
+R_R7         N017711 VIN  37.4k  
+C_C12         N009810 +VOUT1  150pF  
+R_R5         0 FB  3.9k  
+R_R59         N16780995 N16780956  1k  
+R_RUPPER2         N16780958 VOUT1  18k  
+C_C1         RTCT N16780836  470pF  
+D_D4         N16780457 N014770 ES3B 
+R_R6         FB N16780345  57.6k  
+R_R15         N16780006 N009810  78.7  
+C_C15         COMP FB  56pF  
+V_V2         N16779998 N16780003  AC 1
++SIN 0 220 50 0 0 0
+R_R10         CS N16780785  1k  
+R_R12         OUT N16780750  7.87  
+R_R19         0 N16780201  40m  
+R_R21         N03287 N16780006  0.5  
+R_R14         0 N16780785  176m  
+X_U32         N16780956 N16780995 FB 0 SFH615A_4 
+C_C17         VDD 0  0.1u IC=17 
+C_C11         N05660 N16780764  220pF  
+C_C4         N16780345 COMP  56000pF  
+R_R25         0 +VDD  480  
+C_C2         VIN 0  10uF  
+R_R1         RTCT VREF  13.7k  
+D_D8         +VDD VDD D1N4148 
+L_L1         N02527 0  0192uH  
+R_R60         0 N02527  480  
+X_U2         0 0 0 0 XFMR PARAMS: RATIO=0.17
+X_U3         0 0 0 0 XFMR PARAMS: RATIO=0.1
+L_L2         N05909 N05660  0192uH  
+X_U112         N05909 N05660 0 N03287 N05223 0 XFMR2 PARAMS:  RATIO1=0.1
++  RATIO2=0.1
+.IC         V(FB )=2.5
+
+**** RESUMING v2.cir ****
+.END
+
+**** 04/12/22 18:45:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v2-buf-v2"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v2-buf\v2.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DI_S1K          ES3B            D1N4148         X_U35.DN4148    
+          IS    7.310000E-18    7.270000E-12    2.682000E-09    7.000000E-09 
+           N     .775            .7             1.836           2            
+         ISR                                    1.565000E-09                 
+         IKF                                     .04417                      
+          BV  800             100             100             100            
+         IBV    5.000000E-06   10.000000E-06  100.000000E-06                 
+          RS     .042            .0224           .5664           .8          
+          TT    4.320000E-06   36.000000E-09   11.540000E-09    6.000000E-09 
+         CJO   42.400000E-12   83.200000E-12    4.000000E-12    4.000000E-12 
+          VJ                                     .5              .6          
+           M     .333            .333            .3333           .45         
+
+
+               X_U35.D2_mod    X_U35.D3_mod    X_U8.D2         X_U11.Dbt       
+          IS    7.000000E-09   10.000000E-15   10.000000E-15   10.000000E-15 
+           N    1.3              .01                                         
+          BV   36                                             650            
+          RS     .8                                                          
+          TT    6.000000E-09                                                 
+         CJO    4.000000E-12                                    1.640000E-09 
+          VJ     .6                                              .5          
+           M     .45                                             .9          
+
+
+               X_U11.DBODY     X_U11.DGD       X_U10.DKBL06    X_U5.DF         
+          IS  554.480000E-09   10.000000E-15    1.323100E-06   25.700000E-12 
+           N    1.95                            1.2911          1.1          
+         ISR                                   10.010000E-21                 
+          NR                                    4.995                        
+         IKF                                    1.9588                       
+          BV                                  600                            
+         IBV                                   10.000000E-06                 
+          RS   28.000000E-06                    3.662300E-03     .756        
+          TT  250.000000E-09                   27.200000E-09   50.100000E-09 
+         CJO                  230.000000E-12   48.500000E-12  377.000000E-12 
+          VJ                     .5              .48                         
+           M                     .55             .32             .33         
+          EG    1.12                             .72                         
+
+
+               X_U5.DR         X_U32.LED       
+          IS    5.150000E-15    4.940000E-21 
+           N    1.49            1.01         
+          RS     .46            3.830000E-03 
+          TT                    1.000000E-09 
+         CJO                   13.000000E-12 
+           M                     .333        
+
+
+               X_U8.XAMP.DCLAMP                X_U8.XAMP.DMOD  
+          IS   10.000000E-15                   10.000000E-15 
+          BV    6.8                                          
+         IBV     .01                                         
+          RS   10                                            
+
+
+**** 04/12/22 18:45:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v2-buf-v2"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v2-buf\v2.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U35.QN3904    X_U32.MPSA06    X_U8.XAMP.QPMOD 
+               NPN             NPN             PNP             
+       LEVEL    1               1               1            
+          IS   14.000000E-15   20.300000E-15  100.000000E-18 
+          EG                    1.12                         
+          BF  300             343             217.647        
+          NF    1               1               1            
+         VAF  100              25                            
+         IKF     .025            .0396                       
+         ISE  300.000000E-15    1.190000E-12                 
+          NE                    2                            
+          BR    7.5            10               1            
+          NR    1               1               1            
+         VAR                   16                            
+         IKR                     .075                        
+         ISS    0               0               0            
+          RB                   92.6                          
+          RE    0              23.1             0            
+          RC    2.4             9.26            0            
+         CJE    4.500000E-12   20.700000E-12    0            
+         VJE     .75            1.1              .75         
+         MJE                     .5                          
+         CJC    3.500000E-12   10.000000E-12    0            
+         VJC     .75             .3              .75         
+         MJC     .33             .5              .33         
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          TF  400.000000E-12    4.000000E-09                 
+          TR   21.000000E-09  500.000000E-09                 
+         XTB    1.5             1.5                          
+          KF  900.000000E-18    0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.2          
+           D     .87             .87             .52         
+
+
+**** 04/12/22 18:45:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v2-buf-v2"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v2-buf\v2.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U11.DMOS      X_U11.MVDR      X_U11.sw        
+               NMOS            NMOS            NMOS            
+       LEVEL    3               1               1            
+           L  100.000000E-06  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06  100.000000E-06 
+         VTO    4.2            -1               0            
+          KP   13.91           27.87           10            
+       GAMMA    0               0               0            
+         PHI     .6              .6              .6          
+      LAMBDA    0                .15            0            
+          IS   10.000000E-15   10.000000E-15   10.000000E-15 
+          JS    0               0               0            
+          PB     .8              .8              .8          
+        PBSW     .8              .8              .8          
+          CJ    0               0               0            
+        CJSW    0               0               0            
+        CGSO    0               0               0            
+        CGDO    0               0               0            
+        CGBO    0               0               0            
+         TOX  100.000000E-09    0               0            
+          XJ    0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03 
+        VMAX  150.000000E+03                                 
+         ETA    0                                            
+      DIOMOD    1               1               1            
+         VFB    0               0               0            
+        LETA    0               0               0            
+        WETA    0               0               0            
+          U0    0               0               0            
+        TEMP    0               0               0            
+         VDD    5               5               5            
+       XPART    0               0               0            
+
+
+               X_U8.XDRIVE._NMOS 
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    3            
+          KP    1            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD   10            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ  101.851000E-09 
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+        NSUB    1.000000E+09 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+               X_U8.XDRIVE._PMOS 
+               PMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO   -3            
+          KP    1            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD    5.5          
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ  101.851000E-09 
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+        NSUB    1.000000E+09 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 04/12/22 18:45:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v2-buf-v2"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v2-buf\v2.sim ] 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U8.SOSC       X_U8.SUVLO      
+         RON     .01             .01         
+        ROFF    1.000000E+06   10.000000E+06 
+          VT    1.45           11.75         
+          VH     .95            2.75         
+          TD    0               0            
+
+
+WARNING(ORPSIM-16534): Using high values of ITL4 for Speed Level > 0 may increase total simulation job time.
+Reducing minimum delta to make the circuit converge.
+
+          JOB ABORTED
+
+**** 04/12/22 18:45:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "v2-buf-v2"  [ E:\sdu-courses\2022-Spring\EDB2\simulation\ucc28c42_v3\ucc28c42_v3-PSpiceFiles\v2-buf\v2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =     1818.66
+  Total job time (using Solver 1)   =      107.63
+
